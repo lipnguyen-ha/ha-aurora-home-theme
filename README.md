@@ -24,7 +24,7 @@ Bố cục trong ảnh là của một dashboard riêng. Theme chỉ đổi màu
 
 ## Hai bản trong cùng một file
 
-File `aurora-home.yaml` chứa hai theme: **Aurora Home** và **Aurora Home Plus**. Cài một lần là có cả hai, chọn bản nào thì chọn trong Hồ sơ.
+File `aurora-home.yaml` chứa hai theme chính: **Aurora Home** và **Aurora Home Plus**, mỗi theme có thêm bốn bản [hình nền khác](#các-bản-hình-nền). Cài một lần là có tất cả, chọn bản nào thì chọn trong Hồ sơ.
 
 ### Giống nhau
 
@@ -48,6 +48,20 @@ Khác biệt duy nhất là cách hiển thị thiết bị đang **bật** và 
 | Sub-button đang bật của Bubble Card | Nền cam, chữ trắng | Viên trắng, chữ đen |
 | Card lớn của Bubble Card khi bật | Không đổi | Nền trắng, chữ đen, **nếu dashboard dùng biến của theme** (xem [bên dưới](#card-lớn-của-bubble-card)) |
 | Tile sensor | Nền tối | Nền tối |
+
+### Các bản hình nền
+
+Mỗi theme có thêm bốn bản hình nền khác. Tất cả đều là gradient CSS tự vẽ, không dùng ảnh.
+
+| Hình nền | Tông màu | Tên theme |
+|---|---|---|
+| Mặc định | hồng, cam, xanh, tím | `Aurora Home`, `Aurora Home Plus` |
+| Ocean | xanh ngọc, xanh da trời, chàm | `Aurora Home Ocean`, `Aurora Home Plus Ocean` |
+| Sunset | hồng đậm, cam, san hô, tím | `Aurora Home Sunset`, `Aurora Home Plus Sunset` |
+| Forest | xanh lá, vàng ô liu, xanh cổ vịt | `Aurora Home Forest`, `Aurora Home Plus Forest` |
+| Midnight | chàm, tím, xanh than | `Aurora Home Midnight`, `Aurora Home Plus Midnight` |
+
+Các bản này chỉ khác hình nền và màu nền của trang cài đặt, thanh bên, menu. Mọi thứ khác giống bản mặc định. Ảnh chụp ở trên là bản mặc định.
 
 ### Vì sao tách làm hai
 
@@ -160,6 +174,7 @@ Sửa trực tiếp trong `aurora-home.yaml`, rồi chạy lại `frontend.reloa
 | Muốn đổi | Biến |
 |---|---|
 | Hình nền | `aurora-home-wallpaper`. Mỗi dòng `radial-gradient` là một vùng màu. |
+| Thêm một bản hình nền của riêng bạn | Chép một khối ở cuối file (ví dụ `Aurora Home Ocean` và `Aurora Home Plus Ocean`), đổi tên và đổi màu. |
 | Độ đậm của card | `aurora-home-surface`. Số cuối là độ đặc, mặc định `0.62`. |
 | Độ trong của pop-up Bubble Card | `aurora-home-popup` |
 | Màu khi bật của từng loại thiết bị | các biến `state-*-color` |

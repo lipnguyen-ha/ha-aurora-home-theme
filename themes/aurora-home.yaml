@@ -5,7 +5,10 @@
 #   - "Aurora Home"      : chi dung bien theme chuan cua HA, khong can card-mod.
 #   - "Aurora Home Plus" : can card-mod; tile va nut dang BAT co nen trang, chu den.
 #
-# Doi mau nen: sua bien aurora-home-wallpaper ben duoi.
+# Moi theme co them cac ban hinh nen khac o cuoi file: Ocean, Sunset, Forest, Midnight.
+# Vi du: "Aurora Home Ocean" va "Aurora Home Plus Ocean".
+#
+# Tu doi mau nen: sua bien aurora-home-wallpaper ben duoi, hoac them mot ban moi o cuoi file.
 
 Aurora Home: &aurora_home
   # =========================
@@ -217,7 +220,7 @@ Aurora Home: &aurora_home
     light:
       app-theme-color: '#3B3559'
 
-Aurora Home Plus:
+Aurora Home Plus: &aurora_home_plus
   <<: *aurora_home
   card-mod-theme: 'Aurora Home Plus'
   # Bien cho dashboard tu to mau card khi BAT (vd. style cua Bubble Card):
@@ -302,3 +305,89 @@ Aurora Home Plus:
     .bubble-sub-button.background-on .bubble-sub-button-icon {
       color: #1c1c1e !important;
     }
+
+# =========================
+# CAC BAN HINH NEN KHAC
+# =========================
+# Moi ban chi doi hinh nen va mau nen dac cua trang cai dat, thanh ben, menu.
+# Ban Plus ke thua ca phan card-mod cua "Aurora Home Plus".
+
+# Ocean: xanh bien: xanh ngoc, xanh da troi, xanh dam, cham
+Aurora Home Ocean: &aurora_home_ocean
+  <<: *aurora_home
+  aurora-home-wallpaper: >-
+    radial-gradient(ellipse 85% 45% at 0% 0%, rgba(38, 150, 170, 1) 0%, rgba(38, 150, 170, 0) 72%),
+    radial-gradient(ellipse 75% 50% at 100% 26%, rgba(72, 142, 212, 1) 0%, rgba(72, 142, 212, 0) 74%),
+    radial-gradient(ellipse 95% 50% at 0% 60%, rgba(40, 82, 162, 1) 0%, rgba(40, 82, 162, 0) 72%),
+    radial-gradient(ellipse 85% 50% at 100% 92%, rgba(82, 72, 162, 1) 0%, rgba(82, 72, 162, 0) 74%),
+    radial-gradient(ellipse 80% 40% at 0% 100%, rgba(48, 120, 182, 1) 0%, rgba(48, 120, 182, 0) 72%),
+    linear-gradient(165deg, #2F7F9E 0%, #3F5FA8 55%, #4A4F9A 100%)
+  primary-background-color: '#26375A'
+  secondary-background-color: '#213050'
+  clear-background-color: '#26375A'
+  app-theme-color: '#26375A'
+  aurora-home-surface-solid: '#2B3A60'
+  sidebar-background-color: '#222F4E'
+
+Aurora Home Plus Ocean:
+  <<: [*aurora_home_ocean, *aurora_home_plus]
+
+# Sunset: hoang hon: hong dam, cam, san ho, tim
+Aurora Home Sunset: &aurora_home_sunset
+  <<: *aurora_home
+  aurora-home-wallpaper: >-
+    radial-gradient(ellipse 85% 45% at 0% 0%, rgba(200, 80, 122, 1) 0%, rgba(200, 80, 122, 0) 72%),
+    radial-gradient(ellipse 75% 50% at 100% 26%, rgba(230, 142, 72, 1) 0%, rgba(230, 142, 72, 0) 74%),
+    radial-gradient(ellipse 95% 50% at 0% 60%, rgba(214, 106, 96, 1) 0%, rgba(214, 106, 96, 0) 72%),
+    radial-gradient(ellipse 85% 50% at 100% 92%, rgba(122, 70, 150, 1) 0%, rgba(122, 70, 150, 0) 74%),
+    radial-gradient(ellipse 80% 40% at 0% 100%, rgba(150, 70, 130, 1) 0%, rgba(150, 70, 130, 0) 72%),
+    linear-gradient(165deg, #C76A6A 0%, #A0558F 55%, #6A4A95 100%)
+  primary-background-color: '#4A2F4F'
+  secondary-background-color: '#412A46'
+  clear-background-color: '#4A2F4F'
+  app-theme-color: '#4A2F4F'
+  aurora-home-surface-solid: '#523556'
+  sidebar-background-color: '#3E2843'
+
+Aurora Home Plus Sunset:
+  <<: [*aurora_home_sunset, *aurora_home_plus]
+
+# Forest: rung: xanh la, vang oliu, xanh co vit, xanh reu
+Aurora Home Forest: &aurora_home_forest
+  <<: *aurora_home
+  aurora-home-wallpaper: >-
+    radial-gradient(ellipse 85% 45% at 0% 0%, rgba(70, 150, 110, 1) 0%, rgba(70, 150, 110, 0) 72%),
+    radial-gradient(ellipse 75% 50% at 100% 26%, rgba(150, 166, 92, 1) 0%, rgba(150, 166, 92, 0) 74%),
+    radial-gradient(ellipse 95% 50% at 0% 60%, rgba(40, 120, 120, 1) 0%, rgba(40, 120, 120, 0) 72%),
+    radial-gradient(ellipse 85% 50% at 100% 92%, rgba(40, 96, 90, 1) 0%, rgba(40, 96, 90, 0) 74%),
+    radial-gradient(ellipse 80% 40% at 0% 100%, rgba(50, 110, 140, 1) 0%, rgba(50, 110, 140, 0) 72%),
+    linear-gradient(165deg, #4E9478 0%, #3A7F7F 55%, #2F6A80 100%)
+  primary-background-color: '#1F3F42'
+  secondary-background-color: '#1B373A'
+  clear-background-color: '#1F3F42'
+  app-theme-color: '#1F3F42'
+  aurora-home-surface-solid: '#26494C'
+  sidebar-background-color: '#1B3538'
+
+Aurora Home Plus Forest:
+  <<: [*aurora_home_forest, *aurora_home_plus]
+
+# Midnight: dem: cham, tim, xanh than
+Aurora Home Midnight: &aurora_home_midnight
+  <<: *aurora_home
+  aurora-home-wallpaper: >-
+    radial-gradient(ellipse 85% 45% at 0% 0%, rgba(70, 70, 150, 1) 0%, rgba(70, 70, 150, 0) 72%),
+    radial-gradient(ellipse 75% 50% at 100% 26%, rgba(110, 70, 150, 1) 0%, rgba(110, 70, 150, 0) 74%),
+    radial-gradient(ellipse 95% 50% at 0% 60%, rgba(30, 50, 110, 1) 0%, rgba(30, 50, 110, 0) 72%),
+    radial-gradient(ellipse 85% 50% at 100% 92%, rgba(60, 40, 100, 1) 0%, rgba(60, 40, 100, 0) 74%),
+    radial-gradient(ellipse 80% 40% at 0% 100%, rgba(40, 70, 130, 1) 0%, rgba(40, 70, 130, 0) 72%),
+    linear-gradient(165deg, #3A3C7A 0%, #2C2F64 55%, #23264F 100%)
+  primary-background-color: '#1E2042'
+  secondary-background-color: '#1A1C3A'
+  clear-background-color: '#1E2042'
+  app-theme-color: '#1E2042'
+  aurora-home-surface-solid: '#262850'
+  sidebar-background-color: '#1A1B38'
+
+Aurora Home Plus Midnight:
+  <<: [*aurora_home_midnight, *aurora_home_plus]
