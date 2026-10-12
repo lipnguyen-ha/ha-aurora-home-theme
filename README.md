@@ -190,7 +190,7 @@ Sửa trực tiếp trong `aurora-home.yaml`, rồi chạy lại `frontend.reloa
 
 ## Dự án liên quan
 
-- [IR Remote Card](https://github.com/lipnguyen-ha/ha-ir-remote-card): card remote cho quạt, loa và các thiết bị hồng ngoại không trạng thái, phát qua ESPHome.
+- [Aurora Device Control Card](https://github.com/lipnguyen-ha/ha-aurora-device-control-card): card điều khiển quạt, loa, TV hồng ngoại (qua ESPHome), điều hòa, robot hút bụi và camera theo cùng một kiểu.
 - [WOL + Presence](https://github.com/lipnguyen-ha/ha-wol-presence): integration bật máy tính bằng Wake-on-LAN và báo máy đang thức hay ngủ, dùng được cho cả Mac.
 
 ## Giấy phép
