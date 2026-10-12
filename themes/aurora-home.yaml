@@ -5,8 +5,8 @@
 #   - "Aurora Home"      : chi dung bien theme chuan cua HA, khong can card-mod.
 #   - "Aurora Home Plus" : can card-mod; tile va nut dang BAT co nen trang, chu den.
 #
-# Moi theme co them cac ban hinh nen khac o cuoi file: Ocean, Sunset, Forest, Midnight.
-# Vi du: "Aurora Home Ocean" va "Aurora Home Plus Ocean".
+# Ban Plus co them cac ban hinh nen khac o cuoi file: Ocean, Sunset, Forest, Midnight.
+# Vi du: "Aurora Home Plus Ocean". Cac ban nay deu can card-mod.
 #
 # Tu doi mau nen: sua bien aurora-home-wallpaper ben duoi, hoac them mot ban moi o cuoi file.
 
@@ -310,11 +310,11 @@ Aurora Home Plus: &aurora_home_plus
 # CAC BAN HINH NEN KHAC
 # =========================
 # Moi ban chi doi hinh nen va mau nen dac cua trang cai dat, thanh ben, menu.
-# Ban Plus ke thua ca phan card-mod cua "Aurora Home Plus".
+# Tat ca ke thua "Aurora Home Plus" nen deu can card-mod.
 
 # Ocean: xanh bien: xanh ngoc, xanh da troi, xanh dam, cham
-Aurora Home Ocean: &aurora_home_ocean
-  <<: *aurora_home
+Aurora Home Plus Ocean:
+  <<: *aurora_home_plus
   aurora-home-wallpaper: >-
     radial-gradient(ellipse 85% 45% at 0% 0%, rgba(38, 150, 170, 1) 0%, rgba(38, 150, 170, 0) 72%),
     radial-gradient(ellipse 75% 50% at 100% 26%, rgba(72, 142, 212, 1) 0%, rgba(72, 142, 212, 0) 74%),
@@ -329,12 +329,9 @@ Aurora Home Ocean: &aurora_home_ocean
   aurora-home-surface-solid: '#2B3A60'
   sidebar-background-color: '#222F4E'
 
-Aurora Home Plus Ocean:
-  <<: [*aurora_home_ocean, *aurora_home_plus]
-
 # Sunset: hoang hon: hong dam, cam, san ho, tim
-Aurora Home Sunset: &aurora_home_sunset
-  <<: *aurora_home
+Aurora Home Plus Sunset:
+  <<: *aurora_home_plus
   aurora-home-wallpaper: >-
     radial-gradient(ellipse 85% 45% at 0% 0%, rgba(200, 80, 122, 1) 0%, rgba(200, 80, 122, 0) 72%),
     radial-gradient(ellipse 75% 50% at 100% 26%, rgba(230, 142, 72, 1) 0%, rgba(230, 142, 72, 0) 74%),
@@ -349,12 +346,9 @@ Aurora Home Sunset: &aurora_home_sunset
   aurora-home-surface-solid: '#523556'
   sidebar-background-color: '#3E2843'
 
-Aurora Home Plus Sunset:
-  <<: [*aurora_home_sunset, *aurora_home_plus]
-
 # Forest: rung: xanh la, vang oliu, xanh co vit, xanh reu
-Aurora Home Forest: &aurora_home_forest
-  <<: *aurora_home
+Aurora Home Plus Forest:
+  <<: *aurora_home_plus
   aurora-home-wallpaper: >-
     radial-gradient(ellipse 85% 45% at 0% 0%, rgba(70, 150, 110, 1) 0%, rgba(70, 150, 110, 0) 72%),
     radial-gradient(ellipse 75% 50% at 100% 26%, rgba(150, 166, 92, 1) 0%, rgba(150, 166, 92, 0) 74%),
@@ -369,12 +363,9 @@ Aurora Home Forest: &aurora_home_forest
   aurora-home-surface-solid: '#26494C'
   sidebar-background-color: '#1B3538'
 
-Aurora Home Plus Forest:
-  <<: [*aurora_home_forest, *aurora_home_plus]
-
 # Midnight: dem: cham, tim, xanh than
-Aurora Home Midnight: &aurora_home_midnight
-  <<: *aurora_home
+Aurora Home Plus Midnight:
+  <<: *aurora_home_plus
   aurora-home-wallpaper: >-
     radial-gradient(ellipse 85% 45% at 0% 0%, rgba(70, 70, 150, 1) 0%, rgba(70, 70, 150, 0) 72%),
     radial-gradient(ellipse 75% 50% at 100% 26%, rgba(110, 70, 150, 1) 0%, rgba(110, 70, 150, 0) 74%),
@@ -388,6 +379,3 @@ Aurora Home Midnight: &aurora_home_midnight
   app-theme-color: '#1E2042'
   aurora-home-surface-solid: '#262850'
   sidebar-background-color: '#1A1B38'
-
-Aurora Home Plus Midnight:
-  <<: [*aurora_home_midnight, *aurora_home_plus]
