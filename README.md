@@ -6,6 +6,22 @@ Theme chỉ đổi màu sắc và kiểu dáng. Nó không đổi bố cục das
 
 Yêu cầu Home Assistant 2026.8 trở lên.
 
+## Ảnh chụp
+
+Ảnh chụp bản **Apple Home Plus** trên điện thoại.
+
+| Tổng quan | Các phòng | Điện năng |
+|:---:|:---:|:---:|
+| <img src="screenshots/01-overview.png" width="260" alt="Tổng quan: thanh tóm tắt, ô đang bật nền trắng, ô đang tắt nền tối"> | <img src="screenshots/02-rooms.png" width="260" alt="Các phòng: tile, Bubble Card và remote IR"> | <img src="screenshots/03-energy.png" width="260" alt="Điện năng: gauge, tile số liệu và biểu đồ"> |
+| Ô đang bật nền trắng, ô đang tắt nền tối với icon màu | Tile, Bubble Card và các nút nhỏ đang bật | Tile số liệu, gauge và biểu đồ giữ nền tối |
+
+| Trang hệ thống | Ô chọn và thanh trượt |
+|:---:|:---:|
+| <img src="screenshots/04-system.png" width="260" alt="Trang hệ thống: danh sách entity và card cập nhật"> | <img src="screenshots/05-controls.png" width="260" alt="Ô chọn và thanh trượt trong card entities"> |
+| Card danh sách entity | Ô chọn và thanh trượt |
+
+Bố cục trong ảnh là của một dashboard riêng. Theme chỉ đổi màu sắc và kiểu dáng, không tạo ra bố cục này.
+
 ## Hai bản trong cùng một file
 
 File `apple-home.yaml` chứa hai theme: **Apple Home** và **Apple Home Plus**. Cài một lần là có cả hai, chọn bản nào thì chọn trong Hồ sơ.
