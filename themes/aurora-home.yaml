@@ -135,10 +135,10 @@ Aurora Home: &aurora_home
   # HOP THOAI / MENU
   # =========================
   ha-dialog-surface-background: 'var(--aurora-home-dialog)'
-  ha-dialog-surface-backdrop-filter: 'blur(30px) saturate(160%)'
+  # Khong dat backdrop-filter cho hop thoai: no bien hop thoai thanh khung chua cua cac
+  # phan tu position: fixed, lam menu chon (ha-select) ben trong bi lech ra ngoai va khong bam duoc.
   ha-dialog-border-radius: '28px'
   ha-bottom-sheet-surface-background: 'var(--aurora-home-dialog)'
-  ha-bottom-sheet-surface-backdrop-filter: 'blur(30px) saturate(160%)'
   mdc-dialog-scrim-color: 'rgba(0, 0, 0, 0.45)'
   mdc-theme-surface: 'var(--aurora-home-surface-solid)'
   md-menu-container-color: 'var(--aurora-home-surface-solid)'
