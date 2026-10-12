@@ -1,6 +1,6 @@
-# Apple Home theme cho Home Assistant
+# Aurora Home theme cho Home Assistant
 
-Theme theo phong cách app Nhà (Apple Home): nền gradient hồng, cam, xanh, tím; card tối trong mờ bo tròn; chữ trắng; màu trạng thái theo bảng màu iOS.
+Theme kính mờ cho Home Assistant: nền gradient hồng, cam, xanh, tím; card tối trong mờ bo tròn; chữ trắng; màu trạng thái tươi, rõ. Thiết bị đang bật nổi lên bằng nền trắng, nhìn một lần là biết cái nào bật, cái nào tắt.
 
 Theme chỉ đổi màu sắc và kiểu dáng. Nó không đổi bố cục dashboard, không phụ thuộc entity nào và không tải ảnh từ bên ngoài.
 
@@ -8,7 +8,7 @@ Yêu cầu Home Assistant 2026.8 trở lên.
 
 ## Ảnh chụp
 
-Ảnh chụp bản **Apple Home Plus** trên điện thoại.
+Ảnh chụp bản **Aurora Home Plus** trên điện thoại.
 
 | Tổng quan | Các phòng | Điện năng |
 |:---:|:---:|:---:|
@@ -24,7 +24,7 @@ Bố cục trong ảnh là của một dashboard riêng. Theme chỉ đổi màu
 
 ## Hai bản trong cùng một file
 
-File `apple-home.yaml` chứa hai theme: **Apple Home** và **Apple Home Plus**. Cài một lần là có cả hai, chọn bản nào thì chọn trong Hồ sơ.
+File `aurora-home.yaml` chứa hai theme: **Aurora Home** và **Aurora Home Plus**. Cài một lần là có cả hai, chọn bản nào thì chọn trong Hồ sơ.
 
 ### Giống nhau
 
@@ -33,14 +33,14 @@ Hai bản dùng chung toàn bộ phần sau:
 - hình nền gradient, độ trong và độ bo của card;
 - màu chữ, font, màu chủ đạo;
 - thanh trên, thanh bên, hộp thoại, pop-up;
-- màu trạng thái theo bảng màu iOS;
+- màu trạng thái;
 - biến cho Bubble Card và Mushroom.
 
 ### Khác nhau
 
 Khác biệt duy nhất là cách hiển thị thiết bị đang **bật** và đang **tắt**:
 
-| | Apple Home | Apple Home Plus |
+| | Aurora Home | Aurora Home Plus |
 |---|---|---|
 | Cần card-mod | Không | **Có** |
 | Tile của thiết bị đang bật | Nền tối như lúc tắt, chỉ icon đổi màu | Nền trắng, chữ đen, icon trắng trên vòng tròn màu |
@@ -55,9 +55,9 @@ Một theme thuần của Home Assistant chỉ đổi được màu chung. Nó k
 
 ### Nên chọn bản nào
 
-- **Chưa cài card-mod, hoặc không muốn cài thêm gì:** chọn **Apple Home**.
-- **Muốn giống Apple Home nhất:** cài card-mod rồi chọn **Apple Home Plus**.
-- **Dashboard đã tự tô màu card khi bật bằng `card_mod` riêng:** bản Plus sẽ ghi đè màu đó trên các tile (đổi thành nền trắng). Nếu muốn giữ màu riêng, chọn **Apple Home**.
+- **Chưa cài card-mod, hoặc không muốn cài thêm gì:** chọn **Aurora Home**.
+- **Muốn thiết bị đang bật nổi hẳn lên bằng nền trắng:** cài card-mod rồi chọn **Aurora Home Plus**.
+- **Dashboard đã tự tô màu card khi bật bằng `card_mod` riêng:** bản Plus sẽ ghi đè màu đó trên các tile (đổi thành nền trắng). Nếu muốn giữ màu riêng, chọn **Aurora Home**.
 
 Nếu chọn bản Plus mà chưa cài card-mod, theme vẫn chạy và không báo lỗi, nhưng sẽ trông giống hệt bản thường. Thấy ô đang bật không đổi sang nền trắng thì kiểm tra lại bước [thêm card-mod](#thêm-card-mod-cho-bản-plus).
 
@@ -71,9 +71,9 @@ Nếu chọn bản Plus mà chưa cài card-mod, theme vẫn chạy và không b
    ```
 
 2. Tạo thư mục `themes` trong thư mục cấu hình của HA nếu chưa có (cùng chỗ với `configuration.yaml`).
-3. Tải file [themes/apple-home.yaml](themes/apple-home.yaml) về và copy vào thư mục `themes` đó.
+3. Tải file [themes/aurora-home.yaml](themes/aurora-home.yaml) về và copy vào thư mục `themes` đó.
 4. Vào **Developer Tools → Actions**, chạy action `frontend.reload_themes`.
-5. Bấm vào tên người dùng ở góc dưới thanh bên để mở **Hồ sơ**, tại mục **Theme** chọn **Apple Home** hoặc **Apple Home Plus**.
+5. Bấm vào tên người dùng ở góc dưới thanh bên để mở **Hồ sơ**, tại mục **Theme** chọn **Aurora Home** hoặc **Aurora Home Plus**.
 
 Theme được chọn theo từng người dùng và từng trình duyệt. Muốn quay lại, chọn theme khác ở cùng chỗ.
 
@@ -83,7 +83,7 @@ Nếu đã có HACS, có thể để HACS tải và cập nhật file thay cho b
 
 1. Mở **HACS**, bấm menu ba chấm ở góc trên, chọn **Custom repositories**.
 2. Dán địa chỉ repo này, chọn loại **Theme**, bấm **Add**.
-3. Tìm **Apple Home Theme** trong HACS và bấm **Download**.
+3. Tìm **Aurora Home Theme** trong HACS và bấm **Download**.
 4. Làm tiếp bước 4 và 5 ở trên.
 
 ### Thêm card-mod cho bản Plus
@@ -155,13 +155,13 @@ ${state === 'on' ? '.bubble-container { background-color: var(--card-on-backgrou
 
 ## Tùy chỉnh
 
-Sửa trực tiếp trong `apple-home.yaml`, rồi chạy lại `frontend.reload_themes`.
+Sửa trực tiếp trong `aurora-home.yaml`, rồi chạy lại `frontend.reload_themes`.
 
 | Muốn đổi | Biến |
 |---|---|
-| Hình nền | `apple-home-wallpaper`. Mỗi dòng `radial-gradient` là một vùng màu. |
-| Độ đậm của card | `apple-home-surface`. Số cuối là độ đặc, mặc định `0.62`. |
-| Độ trong của pop-up Bubble Card | `apple-home-popup` |
+| Hình nền | `aurora-home-wallpaper`. Mỗi dòng `radial-gradient` là một vùng màu. |
+| Độ đậm của card | `aurora-home-surface`. Số cuối là độ đặc, mặc định `0.62`. |
+| Độ trong của pop-up Bubble Card | `aurora-home-popup` |
 | Màu khi bật của từng loại thiết bị | các biến `state-*-color` |
 | Khoảng cách giữa các section | `ha-view-sections-row-gap` |
 
@@ -170,3 +170,7 @@ Sửa trực tiếp trong `apple-home.yaml`, rồi chạy lại `frontend.reload
 - Hình nền đứng yên theo màn hình, không cuộn theo trang.
 - Theme dùng chung một kiểu cho cả chế độ sáng và tối.
 - Bản Plus dùng `:has()` và `color-mix()` của CSS, cần trình duyệt từ năm 2023 trở lại đây.
+
+## Giấy phép
+
+Phát hành theo giấy phép [MIT](LICENSE). Bạn được tự do dùng, sửa và chia sẻ lại.

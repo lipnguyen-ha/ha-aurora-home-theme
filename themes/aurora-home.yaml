@@ -1,18 +1,18 @@
-# Apple Home - theme cho Home Assistant, phong cach app Nha (Apple Home)
-# Nen gradient thuan CSS (khong dung anh ngoai), card toi trong mo, chu trang, mau trang thai theo iOS.
+# Aurora Home - theme cho Home Assistant: nen gradient, card kinh mo
+# Nen gradient thuan CSS (khong dung anh ngoai), card toi trong mo, chu trang, mau trang thai tuoi, ro.
 #
 # File nay co 2 theme:
-#   - "Apple Home"      : chi dung bien theme chuan cua HA, khong can card-mod.
-#   - "Apple Home Plus" : can card-mod; tile va nut dang BAT co nen trang, chu den nhu Apple Home.
+#   - "Aurora Home"      : chi dung bien theme chuan cua HA, khong can card-mod.
+#   - "Aurora Home Plus" : can card-mod; tile va nut dang BAT co nen trang, chu den.
 #
-# Doi mau nen: sua bien apple-home-wallpaper ben duoi.
+# Doi mau nen: sua bien aurora-home-wallpaper ben duoi.
 
-Apple Home: &apple_home
+Aurora Home: &aurora_home
   # =========================
   # NEN
   # =========================
   # 5 vung mau: hong (tren trai), cam vang (phai tren), xanh (trai giua), tim (phai duoi), xanh tim (trai duoi)
-  apple-home-wallpaper: >-
+  aurora-home-wallpaper: >-
     radial-gradient(ellipse 85% 45% at 0% 0%, rgba(186, 96, 142, 1) 0%, rgba(186, 96, 142, 0) 72%),
     radial-gradient(ellipse 75% 50% at 100% 26%, rgba(200, 142, 84, 1) 0%, rgba(200, 142, 84, 0) 74%),
     radial-gradient(ellipse 95% 50% at 0% 60%, rgba(62, 118, 182, 1) 0%, rgba(62, 118, 182, 0) 72%),
@@ -20,8 +20,8 @@ Apple Home: &apple_home
     radial-gradient(ellipse 80% 40% at 0% 100%, rgba(84, 108, 178, 1) 0%, rgba(84, 108, 178, 0) 72%),
     linear-gradient(165deg, #9C6088 0%, #6E5C9E 55%, #5A62A4 100%)
   # Chu "fixed" de HA giu hinh nen dung yen theo man hinh (khong keo dan theo chieu dai trang)
-  lovelace-background: 'var(--apple-home-wallpaper) fixed'
-  background-image: 'var(--apple-home-wallpaper)'
+  lovelace-background: 'var(--aurora-home-wallpaper) fixed'
+  background-image: 'var(--aurora-home-wallpaper)'
   # Mau dac cho cac trang khong phai dashboard (Cai dat, Nhat ky...)
   primary-background-color: '#3B3559'
   secondary-background-color: '#332E4E'
@@ -31,20 +31,20 @@ Apple Home: &apple_home
   # =========================
   # CARD
   # =========================
-  apple-home-surface: 'rgba(30, 30, 56, 0.62)'
-  apple-home-surface-solid: '#36324F'
+  aurora-home-surface: 'rgba(30, 30, 56, 0.62)'
+  aurora-home-surface-solid: '#36324F'
   # Pop-up cua Bubble Card: kinh mo, nhin xuyen thay dashboard
-  apple-home-popup: 'rgba(36, 34, 60, 0.58)'
+  aurora-home-popup: 'rgba(36, 34, 60, 0.58)'
   # Hop thoai goc cua HA (more-info, menu): giu dac de chu de doc
-  apple-home-dialog: 'rgba(44, 42, 62, 0.92)'
-  ha-card-background: 'var(--apple-home-surface)'
+  aurora-home-dialog: 'rgba(44, 42, 62, 0.92)'
+  ha-card-background: 'var(--aurora-home-surface)'
   ha-card-backdrop-filter: 'blur(24px) saturate(160%)'
   ha-card-border-radius: '22px'
   ha-card-border-width: '0px'
   ha-card-border-color: 'transparent'
   ha-card-box-shadow: 'none'
   # Mau dac cho menu, dropdown, more-info (nen trong mo se kho doc)
-  card-background-color: 'var(--apple-home-surface-solid)'
+  card-background-color: 'var(--aurora-home-surface-solid)'
   border-radius: '22px'
   ha-view-sections-column-gap: '16px'
   # Khoang cach giua cac section, va khoang trong phia tren thanh badge dau trang
@@ -59,19 +59,19 @@ Apple Home: &apple_home
   text-light-primary-color: '#FFFFFF'
   disabled-text-color: 'rgba(255, 255, 255, 0.34)'
   divider-color: 'rgba(255, 255, 255, 0.12)'
-  ha-font-family-body: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-  ha-font-family-heading: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+  ha-font-family-body: 'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+  ha-font-family-heading: 'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
   ha-card-header-font-family: 'var(--ha-font-family-heading)'
   mdc-typography-font-family: 'var(--ha-font-family-body)'
   paper-font-common-base_-_font-family: 'var(--ha-font-family-body)'
   ha-font-smoothing: 'antialiased'
-  # Tieu de section to va dam nhu ten phong trong Apple Home
+  # Tieu de section to va dam
   ha-heading-card-title-font-size: '20px'
   ha-heading-card-title-font-weight: '600'
   ha-heading-card-title-color: 'rgba(255, 255, 255, 0.96)'
 
   # =========================
-  # MAU CHINH / TRANG THAI (bang mau iOS)
+  # MAU CHINH / TRANG THAI
   # =========================
   primary-color: '#FF9F0A'
   dark-primary-color: '#E08A00'
@@ -111,7 +111,7 @@ Apple Home: &apple_home
   label-badge-yellow: '#FFD60A'
   label-badge-grey: '#8E8E93'
   label-badge-text-color: 'rgba(255, 255, 255, 0.96)'
-  label-badge-background-color: 'var(--apple-home-surface-solid)'
+  label-badge-background-color: 'var(--aurora-home-surface-solid)'
 
   # =========================
   # THANH TREN / SIDEBAR
@@ -131,15 +131,15 @@ Apple Home: &apple_home
   # =========================
   # HOP THOAI / MENU
   # =========================
-  ha-dialog-surface-background: 'var(--apple-home-dialog)'
+  ha-dialog-surface-background: 'var(--aurora-home-dialog)'
   ha-dialog-surface-backdrop-filter: 'blur(30px) saturate(160%)'
   ha-dialog-border-radius: '28px'
-  ha-bottom-sheet-surface-background: 'var(--apple-home-dialog)'
+  ha-bottom-sheet-surface-background: 'var(--aurora-home-dialog)'
   ha-bottom-sheet-surface-backdrop-filter: 'blur(30px) saturate(160%)'
   mdc-dialog-scrim-color: 'rgba(0, 0, 0, 0.45)'
-  mdc-theme-surface: 'var(--apple-home-surface-solid)'
-  md-menu-container-color: 'var(--apple-home-surface-solid)'
-  wa-color-surface-raised: 'var(--apple-home-surface-solid)'
+  mdc-theme-surface: 'var(--aurora-home-surface-solid)'
+  md-menu-container-color: 'var(--aurora-home-surface-solid)'
+  wa-color-surface-raised: 'var(--aurora-home-surface-solid)'
   code-editor-background-color: '#2A2640'
 
   # =========================
@@ -182,7 +182,7 @@ Apple Home: &apple_home
   # CARD BEN THU BA
   # =========================
   # Bubble Card
-  bubble-main-background-color: 'var(--apple-home-surface)'
+  bubble-main-background-color: 'var(--aurora-home-surface)'
   bubble-secondary-background-color: 'rgba(255, 255, 255, 0.10)'
   # Mau nen khi BAT. Phai du toi de Bubble giu chu trang (mau sang se bi doi sang chu den).
   bubble-accent-color: '#FF9F0A'
@@ -194,11 +194,11 @@ Apple Home: &apple_home
   bubble-sub-button-background-color: 'rgba(255, 255, 255, 0.10)'
   bubble-box-shadow: 'none'
   bubble-pop-up-border-radius: '28px'
-  bubble-pop-up-main-background-color: 'var(--apple-home-popup)'
-  bubble-pop-up-background-color: 'var(--apple-home-popup)'
+  bubble-pop-up-main-background-color: 'var(--aurora-home-popup)'
+  bubble-pop-up-background-color: 'var(--aurora-home-popup)'
   bubble-backdrop-background-color: 'rgba(0, 0, 0, 0.30)'
   bubble-select-list-border-radius: '16px'
-  bubble-select-list-background-color: 'var(--apple-home-surface-solid)'
+  bubble-select-list-background-color: 'var(--aurora-home-surface-solid)'
   # Mushroom
   mush-rgb-state-light: '255, 214, 10'
   mush-rgb-state-switch: '255, 214, 10'
@@ -210,16 +210,16 @@ Apple Home: &apple_home
   mush-chip-border-radius: '9999px'
   mush-title-font-weight: '600'
 
-  # HA 2026.8+ yeu cau khoi modes khong rong. Apple Home dung chung 1 kieu cho ca sang va toi.
+  # HA 2026.8+ yeu cau khoi modes khong rong. Aurora Home dung chung 1 kieu cho ca sang va toi.
   modes:
     dark:
       app-theme-color: '#3B3559'
     light:
       app-theme-color: '#3B3559'
 
-Apple Home Plus:
-  <<: *apple_home
-  card-mod-theme: 'Apple Home Plus'
+Aurora Home Plus:
+  <<: *aurora_home
+  card-mod-theme: 'Aurora Home Plus'
   # Bien cho dashboard tu to mau card khi BAT (vd. style cua Bubble Card):
   #   background-color: var(--card-on-background-color, <mau rieng>)
   # Theme khac khong dinh nghia cac bien nay nen dashboard giu mau rieng cua no.
@@ -227,13 +227,13 @@ Apple Home Plus:
   card-on-border-color: 'transparent'
   card-on-text-color: '#1c1c1e'
   card-on-sub-button-background-color: 'rgba(60, 60, 67, 0.12)'
-  # Icon nhu Apple Home. BAT: icon trang tren vong tron mau dac (100% mau thiet bi).
+  # Icon. BAT: icon trang tren vong tron mau dac (100% mau thiet bi).
   # TAT: icon giu mau thiet bi (100%) tren vong tron toi.
   card-on-icon-color: '#FFFFFF'
   card-on-icon-background-mix: '100%'
   card-off-icon-mix: '100%'
   card-off-icon-background-color: 'rgba(0, 0, 0, 0.22)'
-  # Mot kieu BAT thong nhat nhu Apple Home: nen trang, chu den.
+  # Mot kieu BAT thong nhat: nen trang, chu den.
   # Tile card gan class "active" cho moi entity khong tat, ke ca sensor,
   # nen chi ap dung cho thiet bi bat/tat duoc; sensor giu nen toi.
   # Dung !important de thang ca card tu to mau bang card_mod rieng.
@@ -251,13 +251,13 @@ Apple Home Plus:
     }
 
     /* Mau mac dinh theo loai thiet bi. Dashboard co the ghi de bang --device-color tren ha-card. */
-    ha-card:has(ha-tile-icon:is([data-domain="light"], [data-domain="switch"], [data-domain="input_boolean"])) { --apple-home-device-color: #FFCC33; }
-    ha-card:has(ha-tile-icon:is([data-domain="fan"], [data-domain="climate"], [data-domain="cover"], [data-domain="humidifier"])) { --apple-home-device-color: #35B8E8; }
-    ha-card:has(ha-tile-icon[data-domain="media_player"]) { --apple-home-device-color: #3E9BF0; }
-    ha-card:has(ha-tile-icon[data-domain="vacuum"]) { --apple-home-device-color: #FF9F6B; }
-    ha-card:has(ha-tile-icon[data-domain="lock"]) { --apple-home-device-color: #30D158; }
-    ha-card:has(ha-tile-icon[data-domain="siren"]) { --apple-home-device-color: #FF453A; }
-    ha-card:has(ha-tile-icon[data-domain="remote"]) { --apple-home-device-color: #8E8E93; }
+    ha-card:has(ha-tile-icon:is([data-domain="light"], [data-domain="switch"], [data-domain="input_boolean"])) { --aurora-home-device-color: #FFCC33; }
+    ha-card:has(ha-tile-icon:is([data-domain="fan"], [data-domain="climate"], [data-domain="cover"], [data-domain="humidifier"])) { --aurora-home-device-color: #35B8E8; }
+    ha-card:has(ha-tile-icon[data-domain="media_player"]) { --aurora-home-device-color: #3E9BF0; }
+    ha-card:has(ha-tile-icon[data-domain="vacuum"]) { --aurora-home-device-color: #FF9F6B; }
+    ha-card:has(ha-tile-icon[data-domain="lock"]) { --aurora-home-device-color: #30D158; }
+    ha-card:has(ha-tile-icon[data-domain="siren"]) { --aurora-home-device-color: #FF453A; }
+    ha-card:has(ha-tile-icon[data-domain="remote"]) { --aurora-home-device-color: #8E8E93; }
 
     /* TAT: icon giu mau thiet bi, vong tron toi */
     ha-card:has(ha-tile-icon:is(
@@ -273,7 +273,7 @@ Apple Home Plus:
         [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
         [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
         [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon ha-state-icon {
-      color: var(--device-color, var(--apple-home-device-color)) !important;
+      color: var(--device-color, var(--aurora-home-device-color)) !important;
     }
 
     /* BAT: icon trang, vong tron mau dac */
@@ -282,7 +282,7 @@ Apple Home Plus:
         [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
         [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
         [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon {
-      --tile-icon-color: var(--device-color, var(--apple-home-device-color)) !important;
+      --tile-icon-color: var(--device-color, var(--aurora-home-device-color)) !important;
       --tile-icon-opacity: 1 !important;
     }
     ha-card.active:has(ha-tile-icon:is(
