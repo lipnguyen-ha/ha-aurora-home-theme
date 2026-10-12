@@ -1,111 +1,113 @@
-# Aurora Home theme cho Home Assistant
+**English** | [Tiếng Việt](README.vi.md)
 
-Theme kính mờ cho Home Assistant: nền gradient hồng, cam, xanh, tím; card tối trong mờ bo tròn; chữ trắng; màu trạng thái tươi, rõ. Thiết bị đang bật nổi lên bằng nền trắng, nhìn một lần là biết cái nào bật, cái nào tắt.
+# Aurora Home theme for Home Assistant
 
-Theme chỉ đổi màu sắc và kiểu dáng. Nó không đổi bố cục dashboard, không phụ thuộc entity nào và không tải ảnh từ bên ngoài.
+A frosted-glass theme for Home Assistant: a pink, orange, blue and purple gradient background; dark, translucent, rounded cards; white text; bright, clear state colors. Devices that are on stand out with a white background, so one glance tells you which are on and which are off.
 
-Yêu cầu Home Assistant 2026.8 trở lên.
+The theme only changes colors and styling. It does not change the dashboard layout, does not depend on any entity and does not load images from outside.
 
-## Ảnh chụp
+Requires Home Assistant 2026.8 or later.
 
-Ảnh chụp bản **Aurora Home Plus** trên điện thoại.
+## Screenshots
 
-| Tổng quan | Các phòng | Điện năng |
+Screenshots of the **Aurora Home Plus** variant on a phone.
+
+| Overview | Rooms | Energy |
 |:---:|:---:|:---:|
-| <img src="screenshots/01-overview.png" width="260" alt="Tổng quan: thanh tóm tắt, ô đang bật nền trắng, ô đang tắt nền tối"> | <img src="screenshots/02-rooms.png" width="260" alt="Các phòng: tile, Bubble Card và remote IR"> | <img src="screenshots/03-energy.png" width="260" alt="Điện năng: gauge, tile số liệu và biểu đồ"> |
-| Ô đang bật nền trắng, ô đang tắt nền tối với icon màu | Tile, Bubble Card và các nút nhỏ đang bật | Tile số liệu, gauge và biểu đồ giữ nền tối |
+| <img src="screenshots/01-overview.png" width="260" alt="Overview: summary bar, tiles that are on with a white background, tiles that are off with a dark background"> | <img src="screenshots/02-rooms.png" width="260" alt="Rooms: tiles, Bubble Card and IR remotes"> | <img src="screenshots/03-energy.png" width="260" alt="Energy: gauge, data tiles and chart"> |
+| Tiles that are on have a white background, tiles that are off have a dark background with a colored icon | Tiles, Bubble Card and small buttons that are on | Data tiles, gauge and chart keep the dark background |
 
-| Trang hệ thống | Ô chọn và thanh trượt |
+| System page | Selects and sliders |
 |:---:|:---:|
-| <img src="screenshots/04-system.png" width="260" alt="Trang hệ thống: danh sách entity và card cập nhật"> | <img src="screenshots/05-controls.png" width="260" alt="Ô chọn và thanh trượt trong card entities"> |
-| Card danh sách entity | Ô chọn và thanh trượt |
+| <img src="screenshots/04-system.png" width="260" alt="System page: entity list and update card"> | <img src="screenshots/05-controls.png" width="260" alt="Selects and sliders in an entities card"> |
+| Entity list card | Selects and sliders |
 
-Bố cục trong ảnh là của một dashboard riêng. Theme chỉ đổi màu sắc và kiểu dáng, không tạo ra bố cục này.
+The layout in the screenshots belongs to a personal dashboard. The theme only changes colors and styling; it does not create this layout.
 
-## Hai bản trong cùng một file
+## Two variants in one file
 
-File `aurora-home.yaml` chứa hai theme chính: **Aurora Home** và **Aurora Home Plus**. Bản Plus có thêm bốn bản [hình nền khác](#các-bản-hình-nền). Cài một lần là có tất cả, chọn bản nào thì chọn trong Hồ sơ.
+The file `aurora-home.yaml` contains two main themes: **Aurora Home** and **Aurora Home Plus**. The Plus variant also comes with four [other wallpaper variants](#wallpaper-variants). Install once and you have all of them; pick the one you want in your Profile.
 
-### Giống nhau
+### What they share
 
-Hai bản dùng chung toàn bộ phần sau:
+The two variants share all of the following:
 
-- hình nền gradient, độ trong và độ bo của card;
-- màu chữ, font, màu chủ đạo;
-- thanh trên, thanh bên, hộp thoại, pop-up;
-- màu trạng thái;
-- biến cho Bubble Card và Mushroom.
+- the gradient wallpaper, and the translucency and corner radius of cards;
+- text color, font and primary color;
+- the top bar, sidebar, dialogs and pop-ups;
+- state colors;
+- variables for Bubble Card and Mushroom.
 
-### Khác nhau
+### How they differ
 
-Khác biệt duy nhất là cách hiển thị thiết bị đang **bật** và đang **tắt**:
+The only difference is how devices that are **on** and **off** are displayed:
 
 | | Aurora Home | Aurora Home Plus |
 |---|---|---|
-| Cần card-mod | Không | **Có** |
-| Tile của thiết bị đang bật | Nền tối như lúc tắt, chỉ icon đổi màu | Nền trắng, chữ đen, icon trắng trên vòng tròn màu |
-| Tile của thiết bị đang tắt | Icon xám | Icon giữ màu thiết bị trên vòng tròn tối |
-| Sub-button đang bật của Bubble Card | Nền cam, chữ trắng | Viên trắng, chữ đen |
-| Card lớn của Bubble Card khi bật | Không đổi | Nền trắng, chữ đen, **nếu dashboard dùng biến của theme** (xem [bên dưới](#card-lớn-của-bubble-card)) |
-| Tile sensor | Nền tối | Nền tối |
+| Requires card-mod | No | **Yes** |
+| Tile of a device that is on | Dark background as when off, only the icon changes color | White background, black text, white icon on a colored circle |
+| Tile of a device that is off | Gray icon | Icon keeps the device color on a dark circle |
+| Bubble Card sub-button that is on | Orange background, white text | White pill, black text |
+| Large Bubble Card card when on | Unchanged | White background, black text, **if the dashboard uses the theme's variables** (see [below](#large-bubble-card-cards)) |
+| Sensor tile | Dark background | Dark background |
 
-### Các bản hình nền
+### Wallpaper variants
 
-Bản Plus có thêm bốn bản hình nền khác. Tất cả đều là gradient CSS tự vẽ, không dùng ảnh, và **đều cần card-mod** như bản Plus.
+The Plus variant comes with four other wallpaper variants. All of them are hand-drawn CSS gradients that use no images, and **all require card-mod** like the Plus variant.
 
-| Hình nền | Tông màu | Tên theme |
+| Wallpaper | Color tones | Theme name |
 |---|---|---|
-| Mặc định | hồng, cam, xanh, tím | `Aurora Home` (không cần card-mod), `Aurora Home Plus` |
-| Ocean | xanh ngọc, xanh da trời, chàm | `Aurora Home Plus Ocean` |
-| Sunset | hồng đậm, cam, san hô, tím | `Aurora Home Plus Sunset` |
-| Forest | xanh lá, vàng ô liu, xanh cổ vịt | `Aurora Home Plus Forest` |
-| Midnight | chàm, tím, xanh than | `Aurora Home Plus Midnight` |
+| Default | pink, orange, blue, purple | `Aurora Home` (no card-mod needed), `Aurora Home Plus` |
+| Ocean | teal, sky blue, indigo | `Aurora Home Plus Ocean` |
+| Sunset | deep pink, orange, coral, purple | `Aurora Home Plus Sunset` |
+| Forest | green, olive yellow, teal green | `Aurora Home Plus Forest` |
+| Midnight | indigo, purple, navy blue | `Aurora Home Plus Midnight` |
 
-Các bản này chỉ khác hình nền và màu nền của trang cài đặt, thanh bên, menu. Mọi thứ khác giống `Aurora Home Plus`. Ảnh chụp ở trên là bản mặc định.
+These variants differ only in the wallpaper and the background color of the settings pages, sidebar and menus. Everything else is the same as `Aurora Home Plus`. The screenshots above show the default variant.
 
-Chỉ có `Aurora Home` là dùng được khi chưa cài card-mod.
+Only `Aurora Home` can be used without card-mod installed.
 
-### Vì sao tách làm hai
+### Why there are two
 
-Một theme thuần của Home Assistant chỉ đổi được màu chung. Nó không biết thiết bị nào đang bật, nên không thể đổi nền của riêng ô đang bật. Bản Plus dùng card-mod để chèn CSS theo trạng thái của từng ô.
+A plain Home Assistant theme can only change global colors. It does not know which device is on, so it cannot change the background of just the tile that is on. The Plus variant uses card-mod to inject CSS based on the state of each tile.
 
-### Nên chọn bản nào
+### Which one to choose
 
-- **Chưa cài card-mod, hoặc không muốn cài thêm gì:** chọn **Aurora Home**.
-- **Muốn thiết bị đang bật nổi hẳn lên bằng nền trắng:** cài card-mod rồi chọn **Aurora Home Plus**.
-- **Dashboard đã tự tô màu card khi bật bằng `card_mod` riêng:** bản Plus sẽ ghi đè màu đó trên các tile (đổi thành nền trắng). Nếu muốn giữ màu riêng, chọn **Aurora Home**.
+- **card-mod is not installed, or you do not want to install anything extra:** choose **Aurora Home**.
+- **You want devices that are on to really stand out with a white background:** install card-mod, then choose **Aurora Home Plus**.
+- **The dashboard already colors cards when on with its own `card_mod`:** the Plus variant will override that color on tiles (changing it to a white background). If you want to keep your own colors, choose **Aurora Home**.
 
-Nếu chọn bản Plus mà chưa cài card-mod, theme vẫn chạy và không báo lỗi, nhưng sẽ trông giống hệt bản thường. Thấy ô đang bật không đổi sang nền trắng thì kiểm tra lại bước [thêm card-mod](#thêm-card-mod-cho-bản-plus).
+If you choose the Plus variant without card-mod installed, the theme still works and reports no error, but it will look exactly like the regular variant. If tiles that are on do not switch to a white background, check the [adding card-mod](#adding-card-mod-for-the-plus-variant) step again.
 
-## Cài đặt
+## Installation
 
-1. Mở `configuration.yaml`, bảo đảm có hai dòng sau. Nếu vừa thêm thì restart Home Assistant một lần.
+1. Open `configuration.yaml` and make sure it has the following two lines. If you just added them, restart Home Assistant once.
 
    ```yaml
    frontend:
      themes: !include_dir_merge_named themes
    ```
 
-2. Tạo thư mục `themes` trong thư mục cấu hình của HA nếu chưa có (cùng chỗ với `configuration.yaml`).
-3. Tải file [themes/aurora-home.yaml](themes/aurora-home.yaml) về và copy vào thư mục `themes` đó.
-4. Vào **Developer Tools → Actions**, chạy action `frontend.reload_themes`.
-5. Bấm vào tên người dùng ở góc dưới thanh bên để mở **Hồ sơ**, tại mục **Theme** chọn **Aurora Home** hoặc **Aurora Home Plus**.
+2. Create a `themes` folder in the HA configuration folder if it does not exist yet (in the same place as `configuration.yaml`).
+3. Download the file [themes/aurora-home.yaml](themes/aurora-home.yaml) and copy it into that `themes` folder.
+4. Go to **Developer Tools → Actions** and run the action `frontend.reload_themes`.
+5. Click the user name at the bottom of the sidebar to open your **Profile**, and under **Theme** choose **Aurora Home** or **Aurora Home Plus**.
 
-Theme được chọn theo từng người dùng và từng trình duyệt. Muốn quay lại, chọn theme khác ở cùng chỗ.
+The theme is selected per user and per browser. To go back, choose another theme in the same place.
 
-### Cài qua HACS (tùy chọn)
+### Installing via HACS (optional)
 
-Nếu đã có HACS, có thể để HACS tải và cập nhật file thay cho bước 2 và 3:
+If you already have HACS, you can let HACS download and update the file instead of steps 2 and 3:
 
-1. Mở **HACS**, bấm menu ba chấm ở góc trên, chọn **Custom repositories**.
-2. Dán địa chỉ repo này, chọn loại **Theme**, bấm **Add**.
-3. Tìm **Aurora Home Theme** trong HACS và bấm **Download**.
-4. Làm tiếp bước 4 và 5 ở trên.
+1. Open **HACS**, click the three-dot menu in the top corner, and choose **Custom repositories**.
+2. Paste this repository's address, choose the type **Theme**, and click **Add**.
+3. Find **Aurora Home Theme** in HACS and click **Download**.
+4. Continue with steps 4 and 5 above.
 
-### Thêm card-mod cho bản Plus
+### Adding card-mod for the Plus variant
 
-1. Cài [card-mod](https://github.com/thomasloven/lovelace-card-mod) qua HACS.
-2. Thêm card-mod vào `extra_module_url` để nó được nạp trước dashboard, rồi restart HA:
+1. Install [card-mod](https://github.com/thomasloven/lovelace-card-mod) via HACS.
+2. Add card-mod to `extra_module_url` so that it is loaded before the dashboard, then restart HA:
 
    ```yaml
    frontend:
@@ -114,30 +116,30 @@ Nếu đã có HACS, có thể để HACS tải và cập nhật file thay cho b
        - /hacsfiles/lovelace-card-mod/card-mod.js
    ```
 
-## Chi tiết bản Plus
+## Plus variant details
 
-- **Tile của thiết bị bật/tắt được** (đèn, công tắc, quạt, điều hòa, media player, robot hút bụi, khóa…):
-  - Khi bật: nền trắng, chữ đen, icon trắng trên vòng tròn màu đặc.
-  - Khi tắt: nền tối, icon giữ màu thiết bị trên vòng tròn tối.
-- **Tile sensor** giữ nền tối và icon mặc định.
-- **Sub-button đang bật của Bubble Card** thành viên trắng, chữ đen.
+- **Tiles of devices that can be turned on/off** (lights, switches, fans, air conditioners, media players, robot vacuums, locks…):
+  - When on: white background, black text, white icon on a solid colored circle.
+  - When off: dark background, icon keeps the device color on a dark circle.
+- **Sensor tiles** keep the dark background and the default icon.
+- **Bubble Card sub-buttons that are on** become a white pill with black text.
 
-Màu icon lấy theo loại thiết bị:
+The icon color depends on the device type:
 
-| Loại | Màu |
+| Type | Color |
 |---|---|
-| Đèn, công tắc, input_boolean | vàng `#FFCC33` |
-| Quạt, điều hòa, rèm, máy tạo ẩm | xanh da trời `#35B8E8` |
-| Media player | xanh dương `#3E9BF0` |
-| Robot hút bụi | cam `#FF9F6B` |
-| Khóa | xanh lá `#30D158` |
-| Còi | đỏ `#FF453A` |
+| Lights, switches, input_boolean | yellow `#FFCC33` |
+| Fans, air conditioners, covers, humidifiers | sky blue `#35B8E8` |
+| Media players | blue `#3E9BF0` |
+| Robot vacuums | orange `#FF9F6B` |
+| Locks | green `#30D158` |
+| Sirens | red `#FF453A` |
 
-Quy tắc của tile dùng `!important`, nên ghi đè cả tile đã tự tô nền bằng `card_mod` riêng.
+The tile rules use `!important`, so they override even tiles that already color their own background with their own `card_mod`.
 
-### Đặt màu riêng cho một tile
+### Setting a custom color for one tile
 
-Thêm biến `--device-color` lên `ha-card` của tile đó bằng `card_mod`:
+Add the `--device-color` variable to that tile's `ha-card` with `card_mod`:
 
 ```yaml
 type: tile
@@ -148,51 +150,51 @@ card_mod:
     ha-card { --device-color: #3E9BF0; }
 ```
 
-### Card lớn của Bubble Card
+### Large Bubble Card cards
 
-Theme không biết một Bubble Card đang bật hay tắt. Muốn card lớn cũng đổi nền trắng khi bật, dashboard phải tự tô màu trong `styles` của card và dùng các biến sau của theme, kèm màu dự phòng cho theme khác:
+The theme does not know whether a Bubble Card is on or off. If you want the large card to switch to a white background when on as well, the dashboard has to apply the colors itself in the card's `styles` and use the following theme variables, with fallback colors for other themes:
 
-| Biến | Dùng cho |
+| Variable | Used for |
 |---|---|
-| `--card-on-background-color` | nền card khi bật |
-| `--card-on-border-color` | viền card khi bật |
-| `--card-on-text-color` | chữ và icon trên card đang bật |
-| `--card-on-sub-button-background-color` | nền sub-button trên card đang bật |
-| `--card-on-icon-color` | màu icon chính trên card đang bật |
-| `--card-on-icon-background-mix` | độ đậm vòng tròn icon, dùng trong `color-mix()` (theme đặt `100%`) |
-| `--card-off-icon-mix` | tỉ lệ màu thiết bị của icon khi tắt, dùng trong `color-mix()` (theme đặt `100%`) |
-| `--card-off-icon-background-color` | vòng tròn icon khi tắt |
+| `--card-on-background-color` | card background when on |
+| `--card-on-border-color` | card border when on |
+| `--card-on-text-color` | text and icons on a card that is on |
+| `--card-on-sub-button-background-color` | sub-button background on a card that is on |
+| `--card-on-icon-color` | main icon color on a card that is on |
+| `--card-on-icon-background-mix` | strength of the icon circle, used in `color-mix()` (the theme sets `100%`) |
+| `--card-off-icon-mix` | proportion of the device color in the icon when off, used in `color-mix()` (the theme sets `100%`) |
+| `--card-off-icon-background-color` | icon circle when off |
 
-Ví dụ:
+Example:
 
 ```css
 ${state === 'on' ? '.bubble-container { background-color: var(--card-on-background-color, rgba(127,183,230,0.20)) !important; } .bubble-name, .bubble-state { color: var(--card-on-text-color, var(--primary-text-color)) !important; }' : ''}
 ```
 
-## Tùy chỉnh
+## Customization
 
-Sửa trực tiếp trong `aurora-home.yaml`, rồi chạy lại `frontend.reload_themes`.
+Edit `aurora-home.yaml` directly, then run `frontend.reload_themes` again.
 
-| Muốn đổi | Biến |
+| To change | Variable |
 |---|---|
-| Hình nền | `aurora-home-wallpaper`. Mỗi dòng `radial-gradient` là một vùng màu. |
-| Thêm một bản hình nền của riêng bạn | Chép một khối ở cuối file (ví dụ `Aurora Home Plus Ocean`), đổi tên và đổi màu. |
-| Độ đậm của card | `aurora-home-surface`. Số cuối là độ đặc, mặc định `0.62`. |
-| Độ trong của pop-up Bubble Card | `aurora-home-popup` |
-| Màu khi bật của từng loại thiết bị | các biến `state-*-color` |
-| Khoảng cách giữa các section | `ha-view-sections-row-gap` |
+| Wallpaper | `aurora-home-wallpaper`. Each `radial-gradient` line is one color area. |
+| Add a wallpaper variant of your own | Copy one of the blocks at the end of the file (for example `Aurora Home Plus Ocean`), then change its name and colors. |
+| Card darkness | `aurora-home-surface`. The last number is the opacity, default `0.62`. |
+| Translucency of Bubble Card pop-ups | `aurora-home-popup` |
+| On color of each device type | the `state-*-color` variables |
+| Spacing between sections | `ha-view-sections-row-gap` |
 
-## Lưu ý
+## Notes
 
-- Hình nền đứng yên theo màn hình, không cuộn theo trang.
-- Theme dùng chung một kiểu cho cả chế độ sáng và tối.
-- Bản Plus dùng `:has()` và `color-mix()` của CSS, cần trình duyệt từ năm 2023 trở lại đây.
+- The wallpaper stays fixed to the screen and does not scroll with the page.
+- The theme uses a single style for both light and dark mode.
+- The Plus variant uses CSS `:has()` and `color-mix()`, which need a browser from 2023 or later.
 
-## Dự án liên quan
+## Related projects
 
-- [Aurora Device Control Card](https://github.com/lipnguyen-ha/ha-aurora-device-control-card): card điều khiển quạt, loa, TV hồng ngoại (qua ESPHome), điều hòa, robot hút bụi và camera theo cùng một kiểu.
-- [WOL + Presence](https://github.com/lipnguyen-ha/ha-wol-presence): integration bật máy tính bằng Wake-on-LAN và báo máy đang thức hay ngủ, dùng được cho cả Mac.
+- [Aurora Device Control Card](https://github.com/lipnguyen-ha/ha-aurora-device-control-card): a card that controls fans, speakers, infrared TVs (via ESPHome), air conditioners, robot vacuums and cameras in one consistent style.
+- [WOL + Presence](https://github.com/lipnguyen-ha/ha-wol-presence): an integration that turns on a computer with Wake-on-LAN and reports whether the machine is awake or asleep; it works with Macs too.
 
-## Giấy phép
+## License
 
-Phát hành theo giấy phép [MIT](LICENSE). Bạn được tự do dùng, sửa và chia sẻ lại.
+Released under the [MIT](LICENSE) license. You are free to use, modify and redistribute it.
