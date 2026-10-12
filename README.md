@@ -188,6 +188,10 @@ Sửa trực tiếp trong `aurora-home.yaml`, rồi chạy lại `frontend.reloa
 - Theme dùng chung một kiểu cho cả chế độ sáng và tối.
 - Bản Plus dùng `:has()` và `color-mix()` của CSS, cần trình duyệt từ năm 2023 trở lại đây.
 
+## Dự án liên quan
+
+- [IR Remote Card](https://github.com/lipnguyen-ha/ha-ir-remote-card): card remote cho quạt, loa và các thiết bị hồng ngoại không trạng thái, phát qua ESPHome.
+
 ## Giấy phép
 
 Phát hành theo giấy phép [MIT](LICENSE). Bạn được tự do dùng, sửa và chia sẻ lại.
