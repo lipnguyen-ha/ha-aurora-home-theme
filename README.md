@@ -77,7 +77,9 @@ The `Aurora Home Things` (light blue fading to lavender) and `Aurora Home Things
 - Sky blue `#28B3F7` accent for switches, sliders and selected items. Settings pages and dialogs use a light gray `#F2F2F2` background.
 - Section titles and the figures next to them are dark gray, so they stay readable on the wallpaper; the badge icons are darkened too. The top bar is white.
 
-Both **require card-mod** like the Plus variant, and come in light style only: the theme stays light when the phone is in dark mode. `--device-color` and the `--card-on-*` variables for Bubble Card work the same way as in the Plus variant. If the dashboard has its own `card_mod` that forces white text, that text will be hard to read on white tiles.
+**Aurora Home Things Dark** is the same style on a dark background, sampled from the app's dark screenshots: an indigo to teal wallpaper, solid near-black `#17171A` tiles when on, translucent dark tiles when off, white text, and icon circles and buttons in `#222225` / `#29292C`.
+
+All three **require card-mod** like the Plus variant. Things and Things Amber come in light style only: the theme stays light when the phone is in dark mode. `--device-color` and the `--card-on-*` variables for Bubble Card work the same way as in the Plus variant. If the dashboard has its own `card_mod` that forces white text, that text will be hard to read on white tiles.
 
 ### Why there are two
 
