@@ -10,10 +10,9 @@
 #
 # Tu doi mau nen: sua bien aurora-home-wallpaper ben duoi, hoac them mot ban moi o cuoi file.
 
-Aurora Home: &aurora_home
-  # =========================
-  # NEN
-  # =========================
+Aurora Home:
+  # Hinh nen va mau nen dac rieng cua ban nay. Cac ban o cuoi file khai bao lai dung nhom khoa nay.
+  # Khong ghi de khoa da ke thua qua <<:, vi HA bao "duplicate key" cho moi khoa bi ghi de.
   # 5 vung mau: hong (tren trai), cam vang (phai tren), xanh (trai giua), tim (phai duoi), xanh tim (trai duoi)
   aurora-home-wallpaper: >-
     radial-gradient(ellipse 85% 45% at 0% 0%, rgba(186, 96, 142, 1) 0%, rgba(186, 96, 142, 0) 72%),
@@ -22,289 +21,318 @@ Aurora Home: &aurora_home
     radial-gradient(ellipse 85% 50% at 100% 92%, rgba(130, 82, 152, 1) 0%, rgba(130, 82, 152, 0) 74%),
     radial-gradient(ellipse 80% 40% at 0% 100%, rgba(84, 108, 178, 1) 0%, rgba(84, 108, 178, 0) 72%),
     linear-gradient(165deg, #9C6088 0%, #6E5C9E 55%, #5A62A4 100%)
-  # Chu "fixed" de HA giu hinh nen dung yen theo man hinh (khong keo dan theo chieu dai trang)
-  lovelace-background: 'var(--aurora-home-wallpaper) fixed'
-  background-image: 'var(--aurora-home-wallpaper)'
   # Mau dac cho cac trang khong phai dashboard (Cai dat, Nhat ky...)
   primary-background-color: '#3B3559'
   secondary-background-color: '#332E4E'
   clear-background-color: '#3B3559'
   app-theme-color: '#3B3559'
-
-  # =========================
-  # CARD
-  # =========================
-  aurora-home-surface: 'rgba(30, 30, 56, 0.62)'
   aurora-home-surface-solid: '#36324F'
-  # Pop-up cua Bubble Card: kinh mo, nhin xuyen thay dashboard
-  aurora-home-popup: 'rgba(36, 34, 60, 0.58)'
-  # Hop thoai goc cua HA (more-info, menu): giu dac de chu de doc
-  aurora-home-dialog: 'rgba(44, 42, 62, 0.92)'
-  ha-card-background: 'var(--aurora-home-surface)'
-  ha-card-backdrop-filter: 'blur(24px) saturate(160%)'
-  ha-card-border-radius: '22px'
-  ha-card-border-width: '0px'
-  ha-card-border-color: 'transparent'
-  ha-card-box-shadow: 'none'
-  # Mau dac cho menu, dropdown, more-info (nen trong mo se kho doc)
-  card-background-color: 'var(--aurora-home-surface-solid)'
-  border-radius: '22px'
-  ha-view-sections-column-gap: '16px'
-  # Khoang cach giua cac section, va khoang trong phia tren thanh badge dau trang
-  ha-view-sections-row-gap: '22px'
-
-  # =========================
-  # CHU
-  # =========================
-  primary-text-color: 'rgba(255, 255, 255, 0.96)'
-  secondary-text-color: 'rgba(255, 255, 255, 0.58)'
-  text-primary-color: '#FFFFFF'
-  text-light-primary-color: '#FFFFFF'
-  disabled-text-color: 'rgba(255, 255, 255, 0.34)'
-  divider-color: 'rgba(255, 255, 255, 0.12)'
-  ha-font-family-body: 'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-  ha-font-family-heading: 'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-  ha-card-header-font-family: 'var(--ha-font-family-heading)'
-  mdc-typography-font-family: 'var(--ha-font-family-body)'
-  paper-font-common-base_-_font-family: 'var(--ha-font-family-body)'
-  ha-font-smoothing: 'antialiased'
-  # Tieu de section to va dam
-  ha-heading-card-title-font-size: '20px'
-  ha-heading-card-title-font-weight: '600'
-  ha-heading-card-title-color: 'rgba(255, 255, 255, 0.96)'
-
-  # =========================
-  # MAU CHINH / TRANG THAI
-  # =========================
-  primary-color: '#FF9F0A'
-  dark-primary-color: '#E08A00'
-  light-primary-color: '#FFC266'
-  accent-color: '#FF9F0A'
-  info-color: '#64D2FF'
-  success-color: '#30D158'
-  warning-color: '#FFD60A'
-  error-color: '#FF453A'
-  disabled-color: 'rgba(255, 255, 255, 0.34)'
-
-  state-icon-color: 'rgba(255, 255, 255, 0.86)'
-  state-inactive-color: 'rgba(255, 255, 255, 0.60)'
-  state-unavailable-color: 'rgba(255, 255, 255, 0.30)'
-  paper-item-icon-color: 'rgba(255, 255, 255, 0.86)'
-  state-active-color: '#FFD60A'
-  state-light-active-color: '#FFD60A'
-  state-switch-active-color: '#FFD60A'
-  state-input_boolean-active-color: '#FFD60A'
-  state-fan-active-color: '#64D2FF'
-  state-climate-cool-color: '#64D2FF'
-  state-climate-dry-color: '#5AC8FA'
-  state-climate-fan_only-color: '#66D4CF'
-  state-climate-heat-color: '#FF9F0A'
-  state-climate-auto-color: '#30D158'
-  state-media_player-active-color: '#BF5AF2'
-  state-vacuum-active-color: '#FF9F6B'
-  state-cover-active-color: '#64D2FF'
-  state-lock-locked-color: '#30D158'
-  state-lock-unlocked-color: '#FF453A'
-  state-binary_sensor-active-color: '#FFD60A'
-  state-person-home-color: '#30D158'
-
-  label-badge-red: '#FF453A'
-  label-badge-blue: '#0A84FF'
-  label-badge-green: '#30D158'
-  label-badge-yellow: '#FFD60A'
-  label-badge-grey: '#8E8E93'
-  label-badge-text-color: 'rgba(255, 255, 255, 0.96)'
-  label-badge-background-color: 'var(--aurora-home-surface-solid)'
-
-  # =========================
-  # THANH TREN / SIDEBAR
-  # =========================
-  app-header-background-color: 'rgba(46, 42, 71, 0.45)'
-  app-header-backdrop-filter: 'blur(24px) saturate(160%)'
-  app-header-text-color: '#FFFFFF'
-  app-header-selection-bar-color: '#FF9F0A'
-  app-header-edit-background-color: 'rgba(46, 42, 71, 0.85)'
-  app-header-edit-text-color: '#FFFFFF'
   sidebar-background-color: '#2E2A47'
-  sidebar-text-color: 'rgba(255, 255, 255, 0.72)'
-  sidebar-icon-color: 'rgba(255, 255, 255, 0.60)'
-  sidebar-selected-text-color: '#FF9F0A'
-  sidebar-selected-icon-color: '#FF9F0A'
-
-  # =========================
-  # HOP THOAI / MENU
-  # =========================
-  ha-dialog-surface-background: 'var(--aurora-home-dialog)'
-  # Khong dat backdrop-filter cho hop thoai: no bien hop thoai thanh khung chua cua cac
-  # phan tu position: fixed, lam menu chon (ha-select) ben trong bi lech ra ngoai va khong bam duoc.
-  ha-dialog-border-radius: '28px'
-  ha-bottom-sheet-surface-background: 'var(--aurora-home-dialog)'
-  mdc-dialog-scrim-color: 'rgba(0, 0, 0, 0.45)'
-  mdc-theme-surface: 'var(--aurora-home-surface-solid)'
-  md-menu-container-color: 'var(--aurora-home-surface-solid)'
-  wa-color-surface-raised: 'var(--aurora-home-surface-solid)'
-  code-editor-background-color: '#2A2640'
-
-  # =========================
-  # O NHAP / CONG TAC / THANH TRUOT
-  # =========================
-  input-fill-color: 'rgba(255, 255, 255, 0.08)'
-  input-ink-color: 'rgba(255, 255, 255, 0.96)'
-  input-label-ink-color: 'rgba(255, 255, 255, 0.58)'
-  input-disabled-fill-color: 'rgba(255, 255, 255, 0.04)'
-  input-disabled-ink-color: 'rgba(255, 255, 255, 0.34)'
-  input-idle-line-color: 'rgba(255, 255, 255, 0.18)'
-  input-hover-line-color: 'rgba(255, 255, 255, 0.40)'
-  input-dropdown-icon-color: 'rgba(255, 255, 255, 0.58)'
-  mdc-text-field-fill-color: 'rgba(255, 255, 255, 0.08)'
-  mdc-select-fill-color: 'rgba(255, 255, 255, 0.08)'
-  ha-color-form-background: 'rgba(255, 255, 255, 0.08)'
-  ha-color-form-background-hover: 'rgba(255, 255, 255, 0.12)'
-  ha-color-form-background-disabled: 'rgba(255, 255, 255, 0.04)'
-
-  switch-checked-button-color: '#FFFFFF'
-  switch-checked-track-color: '#30D158'
-  switch-unchecked-button-color: '#FFFFFF'
-  switch-unchecked-track-color: 'rgba(255, 255, 255, 0.28)'
-  ha-switch-checked-background-color: '#30D158'
-  ha-switch-checked-background-color-hover: '#34DB5E'
-  ha-switch-checked-thumb-background-color: '#FFFFFF'
-  ha-switch-checked-thumb-background-color-hover: '#FFFFFF'
-  ha-switch-background-color: 'rgba(255, 255, 255, 0.22)'
-  ha-switch-background-color-hover: 'rgba(255, 255, 255, 0.30)'
-  ha-switch-thumb-background-color: '#FFFFFF'
-  ha-switch-thumb-background-color-hover: '#FFFFFF'
-  paper-slider-knob-color: '#FFFFFF'
-  paper-slider-active-color: '#FFFFFF'
-  paper-slider-secondary-color: 'rgba(255, 255, 255, 0.30)'
-  mdc-checkbox-unchecked-color: 'rgba(255, 255, 255, 0.58)'
-  mdc-radio-unchecked-color: 'rgba(255, 255, 255, 0.58)'
-  scrollbar-thumb-color: 'rgba(255, 255, 255, 0.22)'
-
-  # =========================
-  # CARD BEN THU BA
-  # =========================
-  # Bubble Card
-  bubble-main-background-color: 'var(--aurora-home-surface)'
-  bubble-secondary-background-color: 'rgba(255, 255, 255, 0.10)'
-  # Mau nen khi BAT. Phai du toi de Bubble giu chu trang (mau sang se bi doi sang chu den).
-  bubble-accent-color: '#FF9F0A'
-  bubble-sub-button-dark-text-color: '#1c1c1e'
-  bubble-border-radius: '22px'
-  bubble-icon-border-radius: '50%'
-  bubble-icon-background-color: 'rgba(255, 255, 255, 0.12)'
-  bubble-sub-button-border-radius: '14px'
-  bubble-sub-button-background-color: 'rgba(255, 255, 255, 0.10)'
-  bubble-box-shadow: 'none'
-  bubble-pop-up-border-radius: '28px'
-  bubble-pop-up-main-background-color: 'var(--aurora-home-popup)'
-  bubble-pop-up-background-color: 'var(--aurora-home-popup)'
-  bubble-backdrop-background-color: 'rgba(0, 0, 0, 0.30)'
-  bubble-select-list-border-radius: '16px'
-  bubble-select-list-background-color: 'var(--aurora-home-surface-solid)'
-  # Mushroom
-  mush-rgb-state-light: '255, 214, 10'
-  mush-rgb-state-switch: '255, 214, 10'
-  mush-rgb-state-fan: '100, 210, 255'
-  mush-rgb-state-climate-cool: '100, 210, 255'
-  mush-rgb-state-climate-heat: '255, 159, 10'
-  mush-rgb-state-media-player: '191, 90, 242'
-  mush-rgb-state-vacuum: '255, 159, 107'
-  mush-chip-border-radius: '9999px'
-  mush-title-font-weight: '600'
-
-  # HA 2026.8+ yeu cau khoi modes khong rong. Aurora Home dung chung 1 kieu cho ca sang va toi.
+  # HA 2026.8+ yeu cau khoi modes khong rong. Moi ban dung chung 1 kieu cho ca sang va toi.
   modes:
     dark:
       app-theme-color: '#3B3559'
     light:
       app-theme-color: '#3B3559'
 
-Aurora Home Plus: &aurora_home_plus
-  <<: *aurora_home
-  card-mod-theme: 'Aurora Home Plus'
-  # Bien cho dashboard tu to mau card khi BAT (vd. style cua Bubble Card):
-  #   background-color: var(--card-on-background-color, <mau rieng>)
-  # Theme khac khong dinh nghia cac bien nay nen dashboard giu mau rieng cua no.
-  card-on-background-color: 'rgba(255, 255, 255, 0.94)'
-  card-on-border-color: 'transparent'
-  card-on-text-color: '#1c1c1e'
-  card-on-sub-button-background-color: 'rgba(60, 60, 67, 0.12)'
-  # Icon. BAT: icon trang tren vong tron mau dac (100% mau thiet bi).
-  # TAT: icon giu mau thiet bi (100%) tren vong tron toi.
-  card-on-icon-color: '#FFFFFF'
-  card-on-icon-background-mix: '100%'
-  card-off-icon-mix: '100%'
-  card-off-icon-background-color: 'rgba(0, 0, 0, 0.22)'
-  # Mot kieu BAT thong nhat: nen trang, chu den.
-  # Tile card gan class "active" cho moi entity khong tat, ke ca sensor,
-  # nen chi ap dung cho thiet bi bat/tat duoc; sensor giu nen toi.
-  # Dung !important de thang ca card tu to mau bang card_mod rieng.
-  card-mod-card: |
-    ha-card.active:has(ha-tile-icon:is(
-        [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
-        [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
-        [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
-        [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) {
-      background: var(--card-on-background-color) !important;
-      border-color: transparent !important;
-      --primary-text-color: var(--card-on-text-color);
-      --secondary-text-color: rgba(60, 60, 67, 0.60);
-      --ha-card-backdrop-filter: none;
-    }
+  # Phan dung chung, cac ban Plus ke thua qua anchor nay.
+  <<: &aurora_home
+    # =========================
+    # NEN
+    # =========================
+    # Chu "fixed" de HA giu hinh nen dung yen theo man hinh (khong keo dan theo chieu dai trang)
+    lovelace-background: 'var(--aurora-home-wallpaper) fixed'
+    background-image: 'var(--aurora-home-wallpaper)'
 
-    /* Mau mac dinh theo loai thiet bi. Dashboard co the ghi de bang --device-color tren ha-card. */
-    ha-card:has(ha-tile-icon:is([data-domain="light"], [data-domain="switch"], [data-domain="input_boolean"])) { --aurora-home-device-color: #FFCC33; }
-    ha-card:has(ha-tile-icon:is([data-domain="fan"], [data-domain="climate"], [data-domain="cover"], [data-domain="humidifier"])) { --aurora-home-device-color: #35B8E8; }
-    ha-card:has(ha-tile-icon[data-domain="media_player"]) { --aurora-home-device-color: #3E9BF0; }
-    ha-card:has(ha-tile-icon[data-domain="vacuum"]) { --aurora-home-device-color: #FF9F6B; }
-    ha-card:has(ha-tile-icon[data-domain="lock"]) { --aurora-home-device-color: #30D158; }
-    ha-card:has(ha-tile-icon[data-domain="siren"]) { --aurora-home-device-color: #FF453A; }
-    ha-card:has(ha-tile-icon[data-domain="remote"]) { --aurora-home-device-color: #8E8E93; }
+    # =========================
+    # CARD
+    # =========================
+    aurora-home-surface: 'rgba(30, 30, 56, 0.62)'
+    # Pop-up cua Bubble Card: kinh mo, nhin xuyen thay dashboard
+    aurora-home-popup: 'rgba(36, 34, 60, 0.58)'
+    # Hop thoai goc cua HA (more-info, menu): giu dac de chu de doc
+    aurora-home-dialog: 'rgba(44, 42, 62, 0.92)'
+    ha-card-background: 'var(--aurora-home-surface)'
+    ha-card-backdrop-filter: 'blur(24px) saturate(160%)'
+    ha-card-border-radius: '22px'
+    ha-card-border-width: '0px'
+    ha-card-border-color: 'transparent'
+    ha-card-box-shadow: 'none'
+    # Mau dac cho menu, dropdown, more-info (nen trong mo se kho doc)
+    card-background-color: 'var(--aurora-home-surface-solid)'
+    border-radius: '22px'
+    ha-view-sections-column-gap: '16px'
+    # Khoang cach giua cac section, va khoang trong phia tren thanh badge dau trang
+    ha-view-sections-row-gap: '22px'
 
-    /* TAT: icon giu mau thiet bi, vong tron toi */
-    ha-card:has(ha-tile-icon:is(
-        [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
-        [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
-        [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
-        [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon {
-      --tile-icon-color: #000000 !important;
-      --tile-icon-opacity: 0.22 !important;
-    }
-    ha-card:has(ha-tile-icon:is(
-        [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
-        [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
-        [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
-        [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon ha-state-icon {
-      color: var(--device-color, var(--aurora-home-device-color)) !important;
-    }
+    # =========================
+    # CHU
+    # =========================
+    primary-text-color: 'rgba(255, 255, 255, 0.96)'
+    secondary-text-color: 'rgba(255, 255, 255, 0.58)'
+    text-primary-color: '#FFFFFF'
+    text-light-primary-color: '#FFFFFF'
+    disabled-text-color: 'rgba(255, 255, 255, 0.34)'
+    divider-color: 'rgba(255, 255, 255, 0.12)'
+    ha-font-family-body: 'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+    ha-font-family-heading: 'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+    ha-card-header-font-family: 'var(--ha-font-family-heading)'
+    mdc-typography-font-family: 'var(--ha-font-family-body)'
+    paper-font-common-base_-_font-family: 'var(--ha-font-family-body)'
+    ha-font-smoothing: 'antialiased'
+    # Tieu de section to va dam
+    ha-heading-card-title-font-size: '20px'
+    ha-heading-card-title-font-weight: '600'
+    ha-heading-card-title-color: 'rgba(255, 255, 255, 0.96)'
 
-    /* BAT: icon trang, vong tron mau dac */
-    ha-card.active:has(ha-tile-icon:is(
-        [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
-        [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
-        [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
-        [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon {
-      --tile-icon-color: var(--device-color, var(--aurora-home-device-color)) !important;
-      --tile-icon-opacity: 1 !important;
-    }
-    ha-card.active:has(ha-tile-icon:is(
-        [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
-        [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
-        [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
-        [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon ha-state-icon {
-      color: #FFFFFF !important;
-    }
+    # =========================
+    # MAU CHINH / TRANG THAI
+    # =========================
+    primary-color: '#FF9F0A'
+    dark-primary-color: '#E08A00'
+    light-primary-color: '#FFC266'
+    accent-color: '#FF9F0A'
+    info-color: '#64D2FF'
+    success-color: '#30D158'
+    warning-color: '#FFD60A'
+    error-color: '#FF453A'
+    disabled-color: 'rgba(255, 255, 255, 0.34)'
 
-    /* Sub-button cua Bubble Card khi bat: vien trang, chu den */
-    .bubble-sub-button.background-on {
-      background-color: #F2F2F7 !important;
-      box-shadow: inset 0 0 0 1px rgba(60, 60, 67, 0.18) !important;
-      color: #1c1c1e !important;
-    }
-    .bubble-sub-button.background-on .bubble-sub-button-icon {
-      color: #1c1c1e !important;
-    }
+    state-icon-color: 'rgba(255, 255, 255, 0.86)'
+    state-inactive-color: 'rgba(255, 255, 255, 0.60)'
+    state-unavailable-color: 'rgba(255, 255, 255, 0.30)'
+    paper-item-icon-color: 'rgba(255, 255, 255, 0.86)'
+    state-active-color: '#FFD60A'
+    state-light-active-color: '#FFD60A'
+    state-switch-active-color: '#FFD60A'
+    state-input_boolean-active-color: '#FFD60A'
+    state-fan-active-color: '#64D2FF'
+    state-climate-cool-color: '#64D2FF'
+    state-climate-dry-color: '#5AC8FA'
+    state-climate-fan_only-color: '#66D4CF'
+    state-climate-heat-color: '#FF9F0A'
+    state-climate-auto-color: '#30D158'
+    state-media_player-active-color: '#BF5AF2'
+    state-vacuum-active-color: '#FF9F6B'
+    state-cover-active-color: '#64D2FF'
+    state-lock-locked-color: '#30D158'
+    state-lock-unlocked-color: '#FF453A'
+    state-binary_sensor-active-color: '#FFD60A'
+    state-person-home-color: '#30D158'
+
+    label-badge-red: '#FF453A'
+    label-badge-blue: '#0A84FF'
+    label-badge-green: '#30D158'
+    label-badge-yellow: '#FFD60A'
+    label-badge-grey: '#8E8E93'
+    label-badge-text-color: 'rgba(255, 255, 255, 0.96)'
+    label-badge-background-color: 'var(--aurora-home-surface-solid)'
+
+    # =========================
+    # THANH TREN / SIDEBAR
+    # =========================
+    app-header-background-color: 'rgba(46, 42, 71, 0.45)'
+    app-header-backdrop-filter: 'blur(24px) saturate(160%)'
+    app-header-text-color: '#FFFFFF'
+    app-header-selection-bar-color: '#FF9F0A'
+    app-header-edit-background-color: 'rgba(46, 42, 71, 0.85)'
+    app-header-edit-text-color: '#FFFFFF'
+    sidebar-text-color: 'rgba(255, 255, 255, 0.72)'
+    sidebar-icon-color: 'rgba(255, 255, 255, 0.60)'
+    sidebar-selected-text-color: '#FF9F0A'
+    sidebar-selected-icon-color: '#FF9F0A'
+
+    # =========================
+    # HOP THOAI / MENU
+    # =========================
+    ha-dialog-surface-background: 'var(--aurora-home-dialog)'
+    # Khong dat backdrop-filter cho hop thoai: no bien hop thoai thanh khung chua cua cac
+    # phan tu position: fixed, lam menu chon (ha-select) ben trong bi lech ra ngoai va khong bam duoc.
+    ha-dialog-border-radius: '28px'
+    ha-bottom-sheet-surface-background: 'var(--aurora-home-dialog)'
+    mdc-dialog-scrim-color: 'rgba(0, 0, 0, 0.45)'
+    mdc-theme-surface: 'var(--aurora-home-surface-solid)'
+    md-menu-container-color: 'var(--aurora-home-surface-solid)'
+    wa-color-surface-raised: 'var(--aurora-home-surface-solid)'
+    code-editor-background-color: '#2A2640'
+
+    # =========================
+    # O NHAP / CONG TAC / THANH TRUOT
+    # =========================
+    input-fill-color: 'rgba(255, 255, 255, 0.08)'
+    input-ink-color: 'rgba(255, 255, 255, 0.96)'
+    input-label-ink-color: 'rgba(255, 255, 255, 0.58)'
+    input-disabled-fill-color: 'rgba(255, 255, 255, 0.04)'
+    input-disabled-ink-color: 'rgba(255, 255, 255, 0.34)'
+    input-idle-line-color: 'rgba(255, 255, 255, 0.18)'
+    input-hover-line-color: 'rgba(255, 255, 255, 0.40)'
+    input-dropdown-icon-color: 'rgba(255, 255, 255, 0.58)'
+    mdc-text-field-fill-color: 'rgba(255, 255, 255, 0.08)'
+    mdc-select-fill-color: 'rgba(255, 255, 255, 0.08)'
+    ha-color-form-background: 'rgba(255, 255, 255, 0.08)'
+    ha-color-form-background-hover: 'rgba(255, 255, 255, 0.12)'
+    ha-color-form-background-disabled: 'rgba(255, 255, 255, 0.04)'
+
+    switch-checked-button-color: '#FFFFFF'
+    switch-checked-track-color: '#30D158'
+    switch-unchecked-button-color: '#FFFFFF'
+    switch-unchecked-track-color: 'rgba(255, 255, 255, 0.28)'
+    ha-switch-checked-background-color: '#30D158'
+    ha-switch-checked-background-color-hover: '#34DB5E'
+    ha-switch-checked-thumb-background-color: '#FFFFFF'
+    ha-switch-checked-thumb-background-color-hover: '#FFFFFF'
+    ha-switch-background-color: 'rgba(255, 255, 255, 0.22)'
+    ha-switch-background-color-hover: 'rgba(255, 255, 255, 0.30)'
+    ha-switch-thumb-background-color: '#FFFFFF'
+    ha-switch-thumb-background-color-hover: '#FFFFFF'
+    paper-slider-knob-color: '#FFFFFF'
+    paper-slider-active-color: '#FFFFFF'
+    paper-slider-secondary-color: 'rgba(255, 255, 255, 0.30)'
+    mdc-checkbox-unchecked-color: 'rgba(255, 255, 255, 0.58)'
+    mdc-radio-unchecked-color: 'rgba(255, 255, 255, 0.58)'
+    scrollbar-thumb-color: 'rgba(255, 255, 255, 0.22)'
+
+    # =========================
+    # CARD BEN THU BA
+    # =========================
+    # Bubble Card
+    bubble-main-background-color: 'var(--aurora-home-surface)'
+    bubble-secondary-background-color: 'rgba(255, 255, 255, 0.10)'
+    # Mau nen khi BAT. Phai du toi de Bubble giu chu trang (mau sang se bi doi sang chu den).
+    bubble-accent-color: '#FF9F0A'
+    bubble-sub-button-dark-text-color: '#1c1c1e'
+    bubble-border-radius: '22px'
+    bubble-icon-border-radius: '50%'
+    bubble-icon-background-color: 'rgba(255, 255, 255, 0.12)'
+    bubble-sub-button-border-radius: '14px'
+    bubble-sub-button-background-color: 'rgba(255, 255, 255, 0.10)'
+    bubble-box-shadow: 'none'
+    bubble-pop-up-border-radius: '28px'
+    bubble-pop-up-main-background-color: 'var(--aurora-home-popup)'
+    bubble-pop-up-background-color: 'var(--aurora-home-popup)'
+    bubble-backdrop-background-color: 'rgba(0, 0, 0, 0.30)'
+    bubble-select-list-border-radius: '16px'
+    bubble-select-list-background-color: 'var(--aurora-home-surface-solid)'
+    # Mushroom
+    mush-rgb-state-light: '255, 214, 10'
+    mush-rgb-state-switch: '255, 214, 10'
+    mush-rgb-state-fan: '100, 210, 255'
+    mush-rgb-state-climate-cool: '100, 210, 255'
+    mush-rgb-state-climate-heat: '255, 159, 10'
+    mush-rgb-state-media-player: '191, 90, 242'
+    mush-rgb-state-vacuum: '255, 159, 107'
+    mush-chip-border-radius: '9999px'
+    mush-title-font-weight: '600'
+
+Aurora Home Plus:
+  # Cung hinh nen va mau nen voi Aurora Home.
+  aurora-home-wallpaper: >-
+    radial-gradient(ellipse 85% 45% at 0% 0%, rgba(186, 96, 142, 1) 0%, rgba(186, 96, 142, 0) 72%),
+    radial-gradient(ellipse 75% 50% at 100% 26%, rgba(200, 142, 84, 1) 0%, rgba(200, 142, 84, 0) 74%),
+    radial-gradient(ellipse 95% 50% at 0% 60%, rgba(62, 118, 182, 1) 0%, rgba(62, 118, 182, 0) 72%),
+    radial-gradient(ellipse 85% 50% at 100% 92%, rgba(130, 82, 152, 1) 0%, rgba(130, 82, 152, 0) 74%),
+    radial-gradient(ellipse 80% 40% at 0% 100%, rgba(84, 108, 178, 1) 0%, rgba(84, 108, 178, 0) 72%),
+    linear-gradient(165deg, #9C6088 0%, #6E5C9E 55%, #5A62A4 100%)
+  # Mau dac cho cac trang khong phai dashboard (Cai dat, Nhat ky...)
+  primary-background-color: '#3B3559'
+  secondary-background-color: '#332E4E'
+  clear-background-color: '#3B3559'
+  app-theme-color: '#3B3559'
+  aurora-home-surface-solid: '#36324F'
+  sidebar-background-color: '#2E2A47'
+  # HA 2026.8+ yeu cau khoi modes khong rong. Moi ban dung chung 1 kieu cho ca sang va toi.
+  modes:
+    dark:
+      app-theme-color: '#3B3559'
+    light:
+      app-theme-color: '#3B3559'
+
+  # Phan rieng cua ban Plus (can card-mod), cac ban o cuoi file ke thua qua anchor nay.
+  <<: &aurora_home_plus
+    <<: *aurora_home
+    card-mod-theme: 'Aurora Home Plus'
+    # Bien cho dashboard tu to mau card khi BAT (vd. style cua Bubble Card):
+    #   background-color: var(--card-on-background-color, <mau rieng>)
+    # Theme khac khong dinh nghia cac bien nay nen dashboard giu mau rieng cua no.
+    card-on-background-color: 'rgba(255, 255, 255, 0.94)'
+    card-on-border-color: 'transparent'
+    card-on-text-color: '#1c1c1e'
+    card-on-sub-button-background-color: 'rgba(60, 60, 67, 0.12)'
+    # Icon. BAT: icon trang tren vong tron mau dac (100% mau thiet bi).
+    # TAT: icon giu mau thiet bi (100%) tren vong tron toi.
+    card-on-icon-color: '#FFFFFF'
+    card-on-icon-background-mix: '100%'
+    card-off-icon-mix: '100%'
+    card-off-icon-background-color: 'rgba(0, 0, 0, 0.22)'
+    # Mot kieu BAT thong nhat: nen trang, chu den.
+    # Tile card gan class "active" cho moi entity khong tat, ke ca sensor,
+    # nen chi ap dung cho thiet bi bat/tat duoc; sensor giu nen toi.
+    # Dung !important de thang ca card tu to mau bang card_mod rieng.
+    card-mod-card: |
+      ha-card.active:has(ha-tile-icon:is(
+          [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
+          [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
+          [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
+          [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) {
+        background: var(--card-on-background-color) !important;
+        border-color: transparent !important;
+        --primary-text-color: var(--card-on-text-color);
+        --secondary-text-color: rgba(60, 60, 67, 0.60);
+        --ha-card-backdrop-filter: none;
+      }
+
+      /* Mau mac dinh theo loai thiet bi. Dashboard co the ghi de bang --device-color tren ha-card. */
+      ha-card:has(ha-tile-icon:is([data-domain="light"], [data-domain="switch"], [data-domain="input_boolean"])) { --aurora-home-device-color: #FFCC33; }
+      ha-card:has(ha-tile-icon:is([data-domain="fan"], [data-domain="climate"], [data-domain="cover"], [data-domain="humidifier"])) { --aurora-home-device-color: #35B8E8; }
+      ha-card:has(ha-tile-icon[data-domain="media_player"]) { --aurora-home-device-color: #3E9BF0; }
+      ha-card:has(ha-tile-icon[data-domain="vacuum"]) { --aurora-home-device-color: #FF9F6B; }
+      ha-card:has(ha-tile-icon[data-domain="lock"]) { --aurora-home-device-color: #30D158; }
+      ha-card:has(ha-tile-icon[data-domain="siren"]) { --aurora-home-device-color: #FF453A; }
+      ha-card:has(ha-tile-icon[data-domain="remote"]) { --aurora-home-device-color: #8E8E93; }
+
+      /* TAT: icon giu mau thiet bi, vong tron toi */
+      ha-card:has(ha-tile-icon:is(
+          [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
+          [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
+          [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
+          [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon {
+        --tile-icon-color: #000000 !important;
+        --tile-icon-opacity: 0.22 !important;
+      }
+      ha-card:has(ha-tile-icon:is(
+          [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
+          [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
+          [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
+          [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon ha-state-icon {
+        color: var(--device-color, var(--aurora-home-device-color)) !important;
+      }
+
+      /* BAT: icon trang, vong tron mau dac */
+      ha-card.active:has(ha-tile-icon:is(
+          [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
+          [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
+          [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
+          [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon {
+        --tile-icon-color: var(--device-color, var(--aurora-home-device-color)) !important;
+        --tile-icon-opacity: 1 !important;
+      }
+      ha-card.active:has(ha-tile-icon:is(
+          [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
+          [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
+          [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
+          [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon ha-state-icon {
+        color: #FFFFFF !important;
+      }
+
+      /* Sub-button cua Bubble Card khi bat: vien trang, chu den */
+      .bubble-sub-button.background-on {
+        background-color: #F2F2F7 !important;
+        box-shadow: inset 0 0 0 1px rgba(60, 60, 67, 0.18) !important;
+        color: #1c1c1e !important;
+      }
+      .bubble-sub-button.background-on .bubble-sub-button-icon {
+        color: #1c1c1e !important;
+      }
 
 # =========================
 # CAC BAN HINH NEN KHAC
@@ -328,6 +356,11 @@ Aurora Home Plus Ocean:
   app-theme-color: '#26375A'
   aurora-home-surface-solid: '#2B3A60'
   sidebar-background-color: '#222F4E'
+  modes:
+    dark:
+      app-theme-color: '#26375A'
+    light:
+      app-theme-color: '#26375A'
 
 # Sunset: hoang hon: hong dam, cam, san ho, tim
 Aurora Home Plus Sunset:
@@ -345,6 +378,11 @@ Aurora Home Plus Sunset:
   app-theme-color: '#4A2F4F'
   aurora-home-surface-solid: '#523556'
   sidebar-background-color: '#3E2843'
+  modes:
+    dark:
+      app-theme-color: '#4A2F4F'
+    light:
+      app-theme-color: '#4A2F4F'
 
 # Forest: rung: xanh la, vang oliu, xanh co vit, xanh reu
 Aurora Home Plus Forest:
@@ -362,6 +400,11 @@ Aurora Home Plus Forest:
   app-theme-color: '#1F3F42'
   aurora-home-surface-solid: '#26494C'
   sidebar-background-color: '#1B3538'
+  modes:
+    dark:
+      app-theme-color: '#1F3F42'
+    light:
+      app-theme-color: '#1F3F42'
 
 # Midnight: dem: cham, tim, xanh than
 Aurora Home Plus Midnight:
@@ -379,3 +422,8 @@ Aurora Home Plus Midnight:
   app-theme-color: '#1E2042'
   aurora-home-surface-solid: '#262850'
   sidebar-background-color: '#1A1B38'
+  modes:
+    dark:
+      app-theme-color: '#1E2042'
+    light:
+      app-theme-color: '#1E2042'
