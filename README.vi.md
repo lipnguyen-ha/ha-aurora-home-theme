@@ -71,8 +71,9 @@ Chỉ có `Aurora Home` là dùng được khi chưa cài card-mod.
 
 Hai theme `Aurora Home Things` (nền xanh dương nhạt dần sang tím lavender) và `Aurora Home Things Amber` (nền vàng cam) theo phong cách app nhà thông minh nền sáng:
 
-- Card thiết bị **đang bật**: nền trắng đặc, chữ đen, icon có màu thiết bị, không có vòng tròn nền.
-- Card thiết bị **đang tắt** và card sensor: trắng trong mờ khoảng 70%, nhìn xuyên được hình nền; icon và chữ màu xám.
+- Card thiết bị **đang bật**: nền trắng đặc, chữ đen, icon có màu thiết bị trên vòng tròn xám nhạt `#F1F1F5`.
+- Card thiết bị **đang tắt** và card sensor: trắng trong mờ khoảng 70%, nhìn xuyên được hình nền; icon và chữ màu xám trên vòng tròn trắng 85%.
+- Nút phụ: xám nhạt trên card bật, trắng 85% trên card tắt, để nổi lên khỏi nền card. Aurora Device Control Card cần bản 2.2.2 trở lên để có vòng icon và nút xám trên card bật.
 - Màu nhấn xanh da trời `#28B3F7` cho công tắc, thanh trượt và mục đang chọn. Trang cài đặt, hộp thoại nền xám nhạt `#F2F2F2`.
 - Tiêu đề section và thanh trên màu trắng, nằm trên hình nền.
 

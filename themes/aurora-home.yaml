@@ -615,14 +615,14 @@ Aurora Home Things:
     # =========================
     # Bubble Card
     bubble-main-background-color: 'rgba(255, 255, 255, 0.70)'
-    bubble-secondary-background-color: '#F4F4F4'
+    bubble-secondary-background-color: '#F1F1F5'
     bubble-accent-color: '#28B3F7'
     bubble-sub-button-dark-text-color: '#010101'
     bubble-border-radius: '26px'
     bubble-icon-border-radius: '50%'
-    bubble-icon-background-color: 'rgba(255, 255, 255, 0.95)'
+    bubble-icon-background-color: 'rgba(255, 255, 255, 0.85)'
     bubble-sub-button-border-radius: '14px'
-    bubble-sub-button-background-color: 'rgba(255, 255, 255, 0.95)'
+    bubble-sub-button-background-color: 'rgba(255, 255, 255, 0.85)'
     bubble-box-shadow: 'none'
     bubble-pop-up-border-radius: '28px'
     bubble-pop-up-main-background-color: '#F2F2F2'
@@ -641,18 +641,22 @@ Aurora Home Things:
     mush-chip-border-radius: '9999px'
     mush-title-font-weight: '600'
 
-    # Bien cho dashboard tu to mau card lon khi BAT (Bubble Card), giong ban Plus
+    # Bien cho card tu to mau khi BAT (Bubble Card, Aurora Device Control Card), giong ban Plus.
+    # Tren card BAT trang, icon va nut phu nam tren nen xam nhat #F1F1F5; tren card TAT trong mo
+    # thi nam tren nen trang 85%, de khong bi chim vao nen card.
+    # Khong dat card-on-icon-color: card tu dung mau thiet bi cho icon.
     card-on-background-color: '#FCFCFC'
     card-on-border-color: 'transparent'
     card-on-text-color: '#010101'
-    card-on-sub-button-background-color: '#F4F4F4'
-    card-on-icon-color: '#FFFFFF'
-    card-on-icon-background-mix: '100%'
+    card-on-sub-button-background-color: '#F1F1F5'
+    card-on-icon-background-color: '#F1F1F5'
+    card-on-quick-background-color: '#F1F1F5'
     card-off-icon-mix: '0%'
-    card-off-icon-background-color: 'rgba(255, 255, 255, 0.95)'
+    card-off-icon-background-color: 'rgba(255, 255, 255, 0.85)'
+    ir-remote-quick-background: 'rgba(255, 255, 255, 0.85)'
 
-    # BAT: card trang dac, icon co mau thiet bi va khong co vong tron nen.
-    # TAT: giu nen trang trong mo, icon va chu xam.
+    # BAT: card trang dac, icon co mau thiet bi tren vong tron xam nhat.
+    # TAT: giu nen trang trong mo, icon va chu xam tren vong tron trang.
     # Chi ap dung cho thiet bi bat/tat duoc; sensor giu nen trong mo, chu den.
     card-mod-card: |
       /* Mau icon theo loai thiet bi. Dashboard co the ghi de bang --device-color tren ha-card. */
@@ -664,7 +668,7 @@ Aurora Home Things:
       ha-card:has(ha-tile-icon[data-domain="siren"]) { --things-device-color: #F4473B; }
       ha-card:has(ha-tile-icon[data-domain="remote"]) { --things-device-color: #8A8A8A; }
 
-      /* TAT: chu va icon xam, khong co vong tron nen */
+      /* TAT: chu va icon xam, vong tron trang 85% */
       ha-card:has(ha-tile-icon:is(
           [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
           [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
@@ -678,7 +682,8 @@ Aurora Home Things:
           [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
           [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
           [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon {
-        --tile-icon-opacity: 0 !important;
+        --tile-icon-color: #FFFFFF !important;
+        --tile-icon-opacity: 0.85 !important;
       }
       ha-card:has(ha-tile-icon:is(
           [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
@@ -688,7 +693,7 @@ Aurora Home Things:
         color: #55595E !important;
       }
 
-      /* BAT: nen trang dac, chu den, icon mau thiet bi */
+      /* BAT: nen trang dac, chu den, icon mau thiet bi tren vong tron xam nhat */
       ha-card.active:has(ha-tile-icon:is(
           [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
           [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
@@ -704,13 +709,21 @@ Aurora Home Things:
           [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
           [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
           [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
+          [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon {
+        --tile-icon-color: #F1F1F5 !important;
+        --tile-icon-opacity: 1 !important;
+      }
+      ha-card.active:has(ha-tile-icon:is(
+          [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
+          [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
+          [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
           [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon ha-state-icon {
         color: var(--device-color, var(--things-device-color)) !important;
       }
 
       /* Sub-button cua Bubble Card khi bat: vong xam nhat nhu nut nguon tren card bat */
       .bubble-sub-button.background-on {
-        background-color: #F4F4F4 !important;
+        background-color: #F1F1F5 !important;
         color: #010101 !important;
       }
       .bubble-sub-button.background-on .bubble-sub-button-icon {
