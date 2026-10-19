@@ -500,13 +500,14 @@ Aurora Home Things:
     mdc-typography-font-family: 'var(--ha-font-family-body)'
     paper-font-common-base_-_font-family: 'var(--ha-font-family-body)'
     ha-font-smoothing: 'antialiased'
-    # Tieu de section nam tren hinh nen: chu den, dam. So lieu ben canh (badge) va tieu de phu xam dam,
-    # vi xam #8A8A8A cua chu phu khong doc duoc tren hinh nen.
+    # Tieu de section nam tren hinh nen: xam dam, khong den han. Xam #8A8A8A cua chu phu khong doc duoc
+    # tren hinh nen. Hang so lieu (badge) bi lam dam bang filter trong card-mod-card, nen chu badge dat
+    # nhat hon de sau filter ra xam #4C5054.
     ha-heading-card-title-font-size: '20px'
     ha-heading-card-title-font-weight: '700'
-    ha-heading-card-title-color: '#010101'
-    ha-heading-card-subtitle-color: '#1F2328'
-    ha-heading-badge-text-color: '#1F2328'
+    ha-heading-card-title-color: '#3F444A'
+    ha-heading-card-subtitle-color: '#4C5054'
+    ha-heading-badge-text-color: '#6D7378'
 
     # =========================
     # MAU CHINH / TRANG THAI
@@ -623,9 +624,9 @@ Aurora Home Things:
     bubble-sub-button-dark-text-color: '#010101'
     bubble-border-radius: '26px'
     bubble-icon-border-radius: '50%'
-    bubble-icon-background-color: 'rgba(255, 255, 255, 0.85)'
+    bubble-icon-background-color: 'rgba(255, 255, 255, 0.35)'
     bubble-sub-button-border-radius: '14px'
-    bubble-sub-button-background-color: 'rgba(255, 255, 255, 0.85)'
+    bubble-sub-button-background-color: 'rgba(255, 255, 255, 0.35)'
     bubble-box-shadow: 'none'
     bubble-pop-up-border-radius: '28px'
     bubble-pop-up-main-background-color: '#F2F2F2'
@@ -646,7 +647,7 @@ Aurora Home Things:
 
     # Bien cho card tu to mau khi BAT (Bubble Card, Aurora Device Control Card), giong ban Plus.
     # Tren card BAT trang, icon va nut phu nam tren nen xam nhat #F1F1F5; tren card TAT trong mo
-    # thi nam tren nen trang 85%, de khong bi chim vao nen card.
+    # thi nam tren nen trang 35%: sang hon nen card mot chut, nhung khong trang nhu nut dang bat.
     # Khong dat card-on-icon-color: card tu dung mau thiet bi cho icon.
     card-on-background-color: '#FCFCFC'
     card-on-border-color: 'transparent'
@@ -655,11 +656,13 @@ Aurora Home Things:
     card-on-icon-background-color: '#F1F1F5'
     card-on-quick-background-color: '#F1F1F5'
     card-off-icon-mix: '0%'
-    card-off-icon-background-color: 'rgba(255, 255, 255, 0.85)'
-    ir-remote-quick-background: 'rgba(255, 255, 255, 0.85)'
+    card-off-icon-background-color: 'rgba(255, 255, 255, 0.35)'
+    ir-remote-quick-background: 'rgba(255, 255, 255, 0.35)'
+    # Ten card dang TAT xam nhu tile tat (Aurora Device Control Card 2.2.3+)
+    card-off-text-color: '#4C5054'
 
     # BAT: card trang dac, icon co mau thiet bi tren vong tron xam nhat.
-    # TAT: giu nen trang trong mo, icon va chu xam tren vong tron trang.
+    # TAT: giu nen trang trong mo, icon va chu xam tren vong tron trang 35%.
     # Chi ap dung cho thiet bi bat/tat duoc; sensor giu nen trong mo, chu den.
     card-mod-card: |
       /* Mau icon theo loai thiet bi. Dashboard co the ghi de bang --device-color tren ha-card. */
@@ -671,7 +674,7 @@ Aurora Home Things:
       ha-card:has(ha-tile-icon[data-domain="siren"]) { --things-device-color: #F4473B; }
       ha-card:has(ha-tile-icon[data-domain="remote"]) { --things-device-color: #8A8A8A; }
 
-      /* TAT: chu va icon xam, vong tron trang 85% */
+      /* TAT: chu va icon xam, vong tron trang 35% */
       ha-card:has(ha-tile-icon:is(
           [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
           [data-domain="input_boolean"], [data-domain="climate"], [data-domain="media_player"],
@@ -686,7 +689,7 @@ Aurora Home Things:
           [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
           [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon {
         --tile-icon-color: #FFFFFF !important;
-        --tile-icon-opacity: 0.85 !important;
+        --tile-icon-opacity: 0.35 !important;
       }
       ha-card:has(ha-tile-icon:is(
           [data-domain="light"], [data-domain="switch"], [data-domain="fan"],
@@ -722,6 +725,12 @@ Aurora Home Things:
           [data-domain="vacuum"], [data-domain="cover"], [data-domain="lock"],
           [data-domain="humidifier"], [data-domain="siren"], [data-domain="remote"])) ha-tile-icon ha-state-icon {
         color: var(--device-color, var(--things-device-color)) !important;
+      }
+
+      /* Hang so lieu tren tieu de section: mau icon do dashboard chon (thuong la mau pastel cho nen toi)
+         bi chim tren hinh nen sang, nen lam dam ca hang. */
+      ha-card .badges-row hui-heading-badge {
+        filter: brightness(0.7) saturate(1.6);
       }
 
       /* Sub-button cua Bubble Card khi bat: vong xam nhat nhu nut nguon tren card bat */

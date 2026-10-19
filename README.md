@@ -72,10 +72,10 @@ Only `Aurora Home` can be used without card-mod installed.
 The `Aurora Home Things` (light blue fading to lavender) and `Aurora Home Things Amber` (amber) themes follow the style of a light smart-home app:
 
 - Tiles of devices that are **on**: solid white background, black text, icon in the device color on a light gray `#F1F1F5` circle.
-- Tiles of devices that are **off**, and sensor tiles: about 45% translucent white, so the wallpaper shows through; gray icon and text on an 85% white circle.
-- Sub-buttons: light gray on cards that are on, 85% white on cards that are off, so they stand out from the card. Aurora Device Control Card needs v2.2.2 or later for the gray icon circle and buttons on cards that are on.
+- Tiles of devices that are **off**, and sensor tiles: about 45% translucent white, so the wallpaper shows through; gray icon and text on a 35% white circle.
+- Sub-buttons: light gray on cards that are on, 35% white on cards that are off, so they stand out from the card without looking switched on. Aurora Device Control Card needs v2.2.3 or later for the gray icon circle and buttons on cards that are on, and the gray name on cards that are off.
 - Sky blue `#28B3F7` accent for switches, sliders and selected items. Settings pages and dialogs use a light gray `#F2F2F2` background.
-- Section titles are black and the figures next to them dark gray, so they stay readable on the wallpaper. The top bar is white.
+- Section titles and the figures next to them are dark gray, so they stay readable on the wallpaper; the badge icons are darkened too. The top bar is white.
 
 Both **require card-mod** like the Plus variant, and come in light style only: the theme stays light when the phone is in dark mode. `--device-color` and the `--card-on-*` variables for Bubble Card work the same way as in the Plus variant. If the dashboard has its own `card_mod` that forces white text, that text will be hard to read on white tiles.
 
