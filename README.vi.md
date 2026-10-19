@@ -67,6 +67,17 @@ Các bản này chỉ khác hình nền và màu nền của trang cài đặt, 
 
 Chỉ có `Aurora Home` là dùng được khi chưa cài card-mod.
 
+### Bản nền sáng: Aurora Home Things
+
+Hai theme `Aurora Home Things` (nền xanh dương nhạt dần sang tím lavender) và `Aurora Home Things Amber` (nền vàng cam) theo phong cách app nhà thông minh nền sáng:
+
+- Card thiết bị **đang bật**: nền trắng đặc, chữ đen, icon có màu thiết bị, không có vòng tròn nền.
+- Card thiết bị **đang tắt** và card sensor: trắng trong mờ khoảng 70%, nhìn xuyên được hình nền; icon và chữ màu xám.
+- Màu nhấn xanh da trời `#28B3F7` cho công tắc, thanh trượt và mục đang chọn. Trang cài đặt, hộp thoại nền xám nhạt `#F2F2F2`.
+- Tiêu đề section và thanh trên màu trắng, nằm trên hình nền.
+
+Hai bản này **cần card-mod** như bản Plus, và chỉ có kiểu sáng: điện thoại để chế độ tối thì theme vẫn sáng. `--device-color` và các biến `--card-on-*` cho Bubble Card dùng giống bản Plus. Nếu dashboard có `card_mod` riêng đặt chữ trắng cố định, chữ đó sẽ khó đọc trên card trắng.
+
 ### Vì sao tách làm hai
 
 Một theme thuần của Home Assistant chỉ đổi được màu chung. Nó không biết thiết bị nào đang bật, nên không thể đổi nền của riêng ô đang bật. Bản Plus dùng card-mod để chèn CSS theo trạng thái của từng ô.
