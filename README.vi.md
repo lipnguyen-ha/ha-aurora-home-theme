@@ -67,19 +67,17 @@ Các bản này chỉ khác hình nền và màu nền của trang cài đặt, 
 
 Chỉ có `Aurora Home` là dùng được khi chưa cài card-mod.
 
-### Bản nền sáng: Aurora Home Things
+### Bản nhà thông minh nền tối: Aurora Home Things Dark
 
-Hai theme `Aurora Home Things` (nền xanh dương nhạt dần sang tím lavender) và `Aurora Home Things Amber` (nền vàng cam) theo phong cách app nhà thông minh nền sáng:
+`Aurora Home Things Dark` theo phong cách app nhà thông minh nền tối, màu đo từ ảnh chụp kiểu tối của app:
 
-- Card thiết bị **đang bật**: nền trắng đặc, chữ đen, icon có màu thiết bị trên vòng tròn xám nhạt `#F1F1F5`.
-- Card thiết bị **đang tắt** và card sensor: trắng trong mờ khoảng 45%, nhìn xuyên được hình nền; icon và chữ màu xám trên vòng tròn trắng 35%.
-- Nút phụ: xám nhạt trên card bật, trắng 35% trên card tắt, để nổi lên khỏi nền card mà không trông như đang bật. Aurora Device Control Card cần bản 2.2.3 trở lên để có vòng icon và nút xám trên card bật, và tên màu xám trên card tắt.
-- Màu nhấn xanh da trời `#28B3F7` cho công tắc, thanh trượt và mục đang chọn. Trang cài đặt, hộp thoại nền xám nhạt `#F2F2F2`.
-- Tiêu đề section và các số liệu bên cạnh màu xám đậm, để đọc rõ trên hình nền; icon của số liệu cũng được làm đậm. Thanh trên màu trắng.
+- Hình nền chàm chuyển sang xanh ngọc, góc dưới trái tím than.
+- Card thiết bị **đang bật**: nền đen đặc `#17171A`, chữ trắng, icon có màu thiết bị trên vòng tròn `#222225`.
+- Card thiết bị **đang tắt** và card sensor: đen trong mờ khoảng 45%, nhìn xuyên được hình nền; chữ và icon xám sáng trên vòng tròn trắng mờ.
+- Nút phụ: `#29292C` trên card bật, trắng mờ trên card tắt.
+- Màu nhấn xanh da trời `#28B3F7` cho công tắc, thanh trượt và mục đang chọn. Trang cài đặt, hộp thoại nền gần đen.
 
-**Aurora Home Things Dark** là cùng phong cách đó trên nền tối, màu đo từ ảnh chụp kiểu tối của app: hình nền chàm chuyển sang xanh ngọc, card bật đen đặc `#17171A`, card tắt đen trong mờ, chữ trắng, vòng icon và nút phụ màu `#222225` / `#29292C`.
-
-Cả ba bản **cần card-mod** như bản Plus. Things và Things Amber chỉ có kiểu sáng: điện thoại để chế độ tối thì theme vẫn sáng. `--device-color` và các biến `--card-on-*` cho Bubble Card dùng giống bản Plus. Nếu dashboard có `card_mod` riêng đặt chữ trắng cố định, chữ đó sẽ khó đọc trên card trắng.
+Bản này **cần card-mod** như bản Plus, và chỉ có kiểu tối. `--device-color` và các biến `--card-on-*` cho Bubble Card dùng giống bản Plus. Aurora Device Control Card cần bản 2.2.3 trở lên để có vòng icon và nút trên card bật, và tên màu xám trên card tắt.
 
 ### Vì sao tách làm hai
 
