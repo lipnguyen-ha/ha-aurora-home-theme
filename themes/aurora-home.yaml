@@ -472,8 +472,8 @@ Aurora Home Things:
     # =========================
     # CARD
     # =========================
-    # Card TAT va card sensor: trang 70%, nhin xuyen hinh nen. Card BAT doi sang trang dac (xem card-mod-card).
-    ha-card-background: 'rgba(255, 255, 255, 0.70)'
+    # Card TAT va card sensor: trang 45%, nhin xuyen hinh nen, de khac han card BAT trang dac (xem card-mod-card).
+    ha-card-background: 'rgba(255, 255, 255, 0.45)'
     ha-card-backdrop-filter: 'blur(20px) saturate(140%)'
     ha-card-border-radius: '26px'
     ha-card-border-width: '0px'
@@ -500,10 +500,13 @@ Aurora Home Things:
     mdc-typography-font-family: 'var(--ha-font-family-body)'
     paper-font-common-base_-_font-family: 'var(--ha-font-family-body)'
     ha-font-smoothing: 'antialiased'
-    # Tieu de section nam tren hinh nen: chu trang, dam
+    # Tieu de section nam tren hinh nen: chu den, dam. So lieu ben canh (badge) va tieu de phu xam dam,
+    # vi xam #8A8A8A cua chu phu khong doc duoc tren hinh nen.
     ha-heading-card-title-font-size: '20px'
     ha-heading-card-title-font-weight: '700'
-    ha-heading-card-title-color: '#FFFFFF'
+    ha-heading-card-title-color: '#010101'
+    ha-heading-card-subtitle-color: '#1F2328'
+    ha-heading-badge-text-color: '#1F2328'
 
     # =========================
     # MAU CHINH / TRANG THAI
@@ -614,7 +617,7 @@ Aurora Home Things:
     # CARD BEN THU BA
     # =========================
     # Bubble Card
-    bubble-main-background-color: 'rgba(255, 255, 255, 0.70)'
+    bubble-main-background-color: 'rgba(255, 255, 255, 0.45)'
     bubble-secondary-background-color: '#F1F1F5'
     bubble-accent-color: '#28B3F7'
     bubble-sub-button-dark-text-color: '#010101'
