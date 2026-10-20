@@ -14,12 +14,12 @@ Yêu cầu Home Assistant 2026.8 trở lên.
 
 | Tổng quan | Các phòng | Điện năng |
 |:---:|:---:|:---:|
-| <img src="screenshots/01-overview.png" width="260" alt="Tổng quan: thanh tóm tắt, ô đang bật nền trắng, ô đang tắt nền tối"> | <img src="screenshots/02-rooms.png" width="260" alt="Các phòng: tile, Bubble Card và remote IR"> | <img src="screenshots/03-energy.png" width="260" alt="Điện năng: gauge, tile số liệu và biểu đồ"> |
+| <img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/01-overview.png" width="260" alt="Tổng quan: thanh tóm tắt, ô đang bật nền trắng, ô đang tắt nền tối"> | <img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/02-rooms.png" width="260" alt="Các phòng: tile, Bubble Card và remote IR"> | <img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/03-energy.png" width="260" alt="Điện năng: gauge, tile số liệu và biểu đồ"> |
 | Ô đang bật nền trắng, ô đang tắt nền tối với icon màu | Tile, Bubble Card và các nút nhỏ đang bật | Tile số liệu, gauge và biểu đồ giữ nền tối |
 
 | Trang hệ thống | Ô chọn và thanh trượt |
 |:---:|:---:|
-| <img src="screenshots/04-system.png" width="260" alt="Trang hệ thống: danh sách entity và card cập nhật"> | <img src="screenshots/05-controls.png" width="260" alt="Ô chọn và thanh trượt trong card entities"> |
+| <img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/04-system.png" width="260" alt="Trang hệ thống: danh sách entity và card cập nhật"> | <img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/05-controls.png" width="260" alt="Ô chọn và thanh trượt trong card entities"> |
 | Card danh sách entity | Ô chọn và thanh trượt |
 
 Bố cục trong ảnh là của một dashboard riêng. Theme chỉ đổi màu sắc và kiểu dáng, không tạo ra bố cục này.
@@ -69,15 +69,20 @@ Chỉ có `Aurora Home` là dùng được khi chưa cài card-mod.
 
 ### Bản nhà thông minh nền tối: Aurora Home Things Dark
 
+<img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/06-things-dark.png" width="400" alt="Aurora Home Things Dark: một phòng với tile và card thiết bị">
+
 `Aurora Home Things Dark` theo phong cách app nhà thông minh nền tối, màu đo từ ảnh chụp kiểu tối của app:
 
 - Hình nền chàm chuyển sang xanh ngọc, góc dưới trái tím than.
 - Card thiết bị **đang bật**: nền đen đặc `#17171A`, chữ trắng, icon có màu thiết bị trên vòng tròn `#222225`.
-- Card thiết bị **đang tắt** và card sensor: đen trong mờ khoảng 45%, nhìn xuyên được hình nền; chữ và icon xám sáng trên vòng tròn trắng mờ.
+- Card thiết bị **đang tắt** và card sensor: navy đậm trong mờ 60%, nhìn xuyên được hình nền; chữ và icon xám sáng trên vòng tròn trắng mờ.
 - Nút phụ: `#29292C` trên card bật, trắng mờ trên card tắt.
-- Màu nhấn xanh da trời `#28B3F7` cho công tắc, thanh trượt và mục đang chọn. Trang cài đặt, hộp thoại nền gần đen.
+- Màu nhấn xanh da trời `#28B3F7` cho công tắc, thanh trượt và mục đang chọn. Trang cài đặt, hộp thoại, menu nền navy đậm; thanh bên là dải gradient navy như app.
+- Card bo góc 16px. Theme luôn chạy ở chế độ tối, nên màu hover trong Cài đặt vẫn là navy kể cả khi máy để chế độ sáng.
 
-Bản này **cần card-mod** như bản Plus, và chỉ có kiểu tối. `--device-color` và các biến `--card-on-*` cho Bubble Card dùng giống bản Plus. Aurora Device Control Card cần bản 2.2.3 trở lên để có vòng icon và nút trên card bật, và tên màu xám trên card tắt.
+**Aurora Home Things Dark White** giống hệt bản trên, chỉ khác card đang bật: nền trắng đặc, chữ đen, icon trên vòng tròn xám nhạt `#F1F1F5`.
+
+Cả hai bản **cần card-mod** như bản Plus, và chỉ có kiểu tối. `--device-color` và các biến `--card-on-*` cho Bubble Card dùng giống bản Plus. Aurora Device Control Card cần bản 2.2.3 trở lên để có vòng icon và nút trên card bật, và tên màu xám trên card tắt.
 
 ### Vì sao tách làm hai
 

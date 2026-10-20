@@ -14,12 +14,12 @@ Screenshots of the **Aurora Home Plus** variant on a phone.
 
 | Overview | Rooms | Energy |
 |:---:|:---:|:---:|
-| <img src="screenshots/01-overview.png" width="260" alt="Overview: summary bar, tiles that are on with a white background, tiles that are off with a dark background"> | <img src="screenshots/02-rooms.png" width="260" alt="Rooms: tiles, Bubble Card and IR remotes"> | <img src="screenshots/03-energy.png" width="260" alt="Energy: gauge, data tiles and chart"> |
+| <img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/01-overview.png" width="260" alt="Overview: summary bar, tiles that are on with a white background, tiles that are off with a dark background"> | <img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/02-rooms.png" width="260" alt="Rooms: tiles, Bubble Card and IR remotes"> | <img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/03-energy.png" width="260" alt="Energy: gauge, data tiles and chart"> |
 | Tiles that are on have a white background, tiles that are off have a dark background with a colored icon | Tiles, Bubble Card and small buttons that are on | Data tiles, gauge and chart keep the dark background |
 
 | System page | Selects and sliders |
 |:---:|:---:|
-| <img src="screenshots/04-system.png" width="260" alt="System page: entity list and update card"> | <img src="screenshots/05-controls.png" width="260" alt="Selects and sliders in an entities card"> |
+| <img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/04-system.png" width="260" alt="System page: entity list and update card"> | <img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/05-controls.png" width="260" alt="Selects and sliders in an entities card"> |
 | Entity list card | Selects and sliders |
 
 The layout in the screenshots belongs to a personal dashboard. The theme only changes colors and styling; it does not create this layout.
@@ -69,15 +69,20 @@ Only `Aurora Home` can be used without card-mod installed.
 
 ### Dark smart-home variant: Aurora Home Things Dark
 
+<img src="https://raw.githubusercontent.com/lipnguyen-ha/ha-aurora-home-theme/main/screenshots/06-things-dark.png" width="400" alt="Aurora Home Things Dark: a room with tiles and device cards">
+
 `Aurora Home Things Dark` follows the style of a dark smart-home app. Its colors were sampled from the app's dark screenshots:
 
 - An indigo to teal wallpaper, with a deep purple corner at the bottom left.
 - Tiles of devices that are **on**: solid near-black `#17171A` background, white text, icon in the device color on a `#222225` circle.
-- Tiles of devices that are **off**, and sensor tiles: about 45% translucent dark, so the wallpaper shows through; light gray text and icon on a faint white circle.
+- Tiles of devices that are **off**, and sensor tiles: 60% translucent deep navy, so the wallpaper shows through; light gray text and icon on a faint white circle.
 - Sub-buttons: `#29292C` on cards that are on, faint white on cards that are off.
-- Sky blue `#28B3F7` accent for switches, sliders and selected items. Settings pages and dialogs are near-black.
+- Sky blue `#28B3F7` accent for switches, sliders and selected items. Settings pages, dialogs and menus are deep navy, and the sidebar is a navy gradient like the app's.
+- Cards have 16px corners, and the theme always runs in dark mode, so hover colors in Settings stay navy even when the device is in light mode.
 
-It **requires card-mod** like the Plus variant and comes in dark style only. `--device-color` and the `--card-on-*` variables for Bubble Card work the same way as in the Plus variant. Aurora Device Control Card needs v2.2.3 or later for the icon circle and buttons on cards that are on, and the gray name on cards that are off.
+**Aurora Home Things Dark White** is the same theme, except that tiles that are on turn solid white with black text, and their icon sits on a light gray `#F1F1F5` circle.
+
+Both **require card-mod** like the Plus variant and come in dark style only. `--device-color` and the `--card-on-*` variables for Bubble Card work the same way as in the Plus variant. Aurora Device Control Card needs v2.2.3 or later for the icon circle and buttons on cards that are on, and the gray name on cards that are off.
 
 ### Why there are two
 
